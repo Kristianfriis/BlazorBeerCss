@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<button @onclick="test">test</button>
+<Page Active="active">
+    <PageTitle>Index</PageTitle>
+
+    <Card Border="Border.Round">
+        <H1>Hello, world!</H1>
+
+        <Span>Welcome to your new app.</Span>
+
+        <SurveyPrompt Title="How is Blazor working for you?" />
+    </Card>
+</Page>
+
+@code {
+    bool active = false;
+
+    void test()
+    {
+        active = !active;
+    }
+}

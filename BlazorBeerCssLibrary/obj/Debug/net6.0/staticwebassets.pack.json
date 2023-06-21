@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\beer.min.css",
+      "PackagePath": "staticwebassets\\css\\beercss\\beer.min.css"
+    },
+    {
+      "Id": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\beer.min.js",
+      "PackagePath": "staticwebassets\\css\\beercss\\beer.min.js"
+    },
+    {
+      "Id": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\material-dynamic-colors.min.js",
+      "PackagePath": "staticwebassets\\css\\beercss\\material-dynamic-colors.min.js"
+    },
+    {
+      "Id": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\material-symbols-outlined.woff2",
+      "PackagePath": "staticwebassets\\css\\beercss\\material-symbols-outlined.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BlazorBeerCssLibrary.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BlazorBeerCssLibrary.props",
+      "PackagePath": "build\\BlazorBeerCssLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorBeerCssLibrary.props",
+      "PackagePath": "buildMultiTargeting\\BlazorBeerCssLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BlazorBeerCssLibrary.props",
+      "PackagePath": "buildTransitive\\BlazorBeerCssLibrary.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

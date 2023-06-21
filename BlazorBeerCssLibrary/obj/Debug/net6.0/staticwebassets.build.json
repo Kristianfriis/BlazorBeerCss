@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "nZTDCM2Dd01mDpFD0DA6eE15Z173vxaDF0o+o62KNOY=",
+  "Source": "BlazorBeerCssLibrary",
+  "BasePath": "_content/BlazorBeerCssLibrary",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BlazorBeerCssLibrary\\wwwroot",
+      "Source": "BlazorBeerCssLibrary",
+      "ContentRoot": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\",
+      "BasePath": "_content/BlazorBeerCssLibrary",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\beer.min.css",
+      "SourceId": "BlazorBeerCssLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\",
+      "BasePath": "_content/BlazorBeerCssLibrary",
+      "RelativePath": "css/beercss/beer.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\beercss\\beer.min.css"
+    },
+    {
+      "Identity": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\beer.min.js",
+      "SourceId": "BlazorBeerCssLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\",
+      "BasePath": "_content/BlazorBeerCssLibrary",
+      "RelativePath": "css/beercss/beer.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\beercss\\beer.min.js"
+    },
+    {
+      "Identity": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\material-dynamic-colors.min.js",
+      "SourceId": "BlazorBeerCssLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\",
+      "BasePath": "_content/BlazorBeerCssLibrary",
+      "RelativePath": "css/beercss/material-dynamic-colors.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\beercss\\material-dynamic-colors.min.js"
+    },
+    {
+      "Identity": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\css\\beercss\\material-symbols-outlined.woff2",
+      "SourceId": "BlazorBeerCssLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Playground\\BlazorBeerCss\\BlazorBeerCssLibrary\\wwwroot\\",
+      "BasePath": "_content/BlazorBeerCssLibrary",
+      "RelativePath": "css/beercss/material-symbols-outlined.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\beercss\\material-symbols-outlined.woff2"
+    }
+  ]
+}
