@@ -189,7 +189,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-9V9sIdryqpvDVB8VqjRha5XYmnCup\/wwGCefexSanaU=",
+      "hash": "sha256-ExtaoCQfYmA0txgMYPhVZXG6sCjvmAalLOA\/igd7k7U=",
       "url": "index.html"
     },
     {
@@ -217,5 +217,5 @@
       "url": "_content\/BlazorBeerCss\/css\/beercss\/material-symbols-outlined.woff2"
     }
   ],
-  "version": "9u7Z4rBt"
+  "version": "2DCK60Lf"
 };
