@@ -1,0 +1,14 @@
+﻿@using BlazorBeerCssLibrary.Extensions;
+@using BlazorBeerCssLibrary.Helpers;
+<article class="@Border.GetEnumDescription() @Padding.GetEnumDescription() @Size.GetEnumDescription() @Color.GetEnumDescription()">
+    @ChildContent
+</article>
+
+@code {
+    [Parameter] public BeerBorders Border { get; set; } = BeerBorders.NoRound;
+    [Parameter] public BeerPaddings Padding { get; set; } = BeerPaddings.Default;
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+    [Parameter] public BeerColors Color { get; set; } = BeerColors.Default;
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

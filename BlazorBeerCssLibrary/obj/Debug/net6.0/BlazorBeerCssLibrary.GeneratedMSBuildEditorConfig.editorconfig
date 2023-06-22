@@ -16,20 +16,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Playground\BlazorBeerCss\BlazorBeerCssLibrary
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/Card.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJkLnJhem9y
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyQnV0dG9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/H1.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIMS5yYXpvcg==
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyQ2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/Page.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlLnJhem9y
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerDivider.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyRGl2aWRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/Span.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTcGFuLnJhem9y
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerH1.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerOverlay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyT3ZlcmxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerSpan.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyU3Bhbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/_Imports.razor]

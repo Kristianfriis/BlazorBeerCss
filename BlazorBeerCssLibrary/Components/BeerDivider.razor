@@ -1,0 +1,7 @@
+﻿@using BlazorBeerCssLibrary.Helpers;
+@using BlazorBeerCssLibrary.Extensions;
+<div class="@(Size.GetEnumDescription())"></div>
+
+@code {
+    [Parameter] public BeerDividers Size { get; set; } = BeerDividers.Divider;
+}

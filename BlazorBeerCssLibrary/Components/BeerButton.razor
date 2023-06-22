@@ -1,0 +1,22 @@
+﻿@using BlazorBeerCssLibrary.Extensions;
+@using BlazorBeerCssLibrary.Helpers;
+<button @onclick="InvokeParentMethod" class="@Size.GetEnumDescription() @Color.GetEnumDescription()">
+    @ChildContent
+</button>
+
+@code {
+    [Parameter] public EventCallback OnClick { get; set; }
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+    [Parameter] public BeerColors Color { get; set; } = BeerColors.Default;
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    bool hasDelegate => OnClick.HasDelegate;
+
+    private async void InvokeParentMethod()
+    {
+        if (!OnClick.HasDelegate)
+            return;
+        await OnClick.InvokeAsync();
+    }
+}

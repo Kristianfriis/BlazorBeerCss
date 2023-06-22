@@ -1,17 +1,21 @@
 ﻿@page "/"
 
-<button @onclick="test">test</button>
-<Page Active="active">
+<BeerButton OnClick="test" Size="BeerSizes.Extra">Click to see or hide card</BeerButton>
+<BeerButton OnClick="test" Size="BeerSizes.Large">Click to see or hide card</BeerButton>
+<BeerButton OnClick="test" Size="BeerSizes.Medium">Click to see or hide card</BeerButton>
+<BeerButton OnClick="test" Size="BeerSizes.Small">Click to see or hide card</BeerButton>
+<BeerPage Active="active">
     <PageTitle>Index</PageTitle>
 
-    <Card Border="Border.Round">
-        <H1>Hello, world!</H1>
-
-        <Span>Welcome to your new app.</Span>
-
+    <BeerCard Border="BeerBorders.Round">
+        <BeerH1>Hello, world!</BeerH1>
+        <BeerDivider Size="BeerDividers.SmallDivider"></BeerDivider>
+        <BeerSpan>Welcome to your new app.</BeerSpan>
+        <BeerDivider Size="BeerDividers.MediumDivider"></BeerDivider>
         <SurveyPrompt Title="How is Blazor working for you?" />
-    </Card>
-</Page>
+        <BeerDivider Size="BeerDividers.LargeDivider"></BeerDivider>
+    </BeerCard>
+</BeerPage>
 
 @code {
     bool active = false;

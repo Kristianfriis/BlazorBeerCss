@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace BlazorBeerCssLibrary.Helpers;
 
-public enum Border
+public enum BeerBorders
 {
+    [Description("")]
+    Default,
     [Description("border")]
     Border,
     [Description("round")]
