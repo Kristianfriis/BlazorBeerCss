@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Playground\BlazorBeerCss\BlazorBeerCssLibrary
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/BeerToast/BeerToast.razor]
+build_metadata.AdditionalFiles.TargetPath = QmVlclRvYXN0XEJlZXJUb2FzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyQnV0dG9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

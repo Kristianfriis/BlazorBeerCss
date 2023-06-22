@@ -1,0 +1,61 @@
+﻿@implements IDisposable
+
+<div class="toast @Type @(ShowToast ? "active": "")" @onclick="HideToast">
+    <span class="max">@toastService.ToastMessage</span>
+    @if (!string.IsNullOrEmpty(toastService.Icon))
+    {
+        <i>@toastService.Icon</i>
+    }
+</div>
+
+@code {
+    [Inject] BeerToastService toastService { get; set; }
+    private bool ShowToast { get; set; } = false;
+    private string Type { get; set; } = "primary";
+
+    protected override void OnInitialized()
+    {
+        toastService.OnChange += () => HandleStateChange();
+        base.OnInitialized();
+    }
+
+    async void HandleStateChange()
+    {
+        ShowToast = true;
+        Type = MapType(toastService.ToastType);
+
+        await InvokeAsync(() => StateHasChanged());
+
+        await Task.Delay(3000);
+
+        ShowToast = false;
+        await InvokeAsync(() => StateHasChanged());
+    }
+
+    string MapType(ToastType toastType)
+    {
+        switch (toastType)
+        {
+            case ToastType.Error:
+                return "error";
+                break;
+            case ToastType.Success:
+                return "green10 light-green-text";
+                break;
+            default:
+                return "primary";
+                break;
+        }
+    }
+
+    void HideToast()
+    {
+        ShowToast = false;
+        StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        toastService.OnChange -= () => HandleStateChange();
+    }
+}
