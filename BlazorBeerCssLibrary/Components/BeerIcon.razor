@@ -1,0 +1,9 @@
+﻿@using BlazorBeerCssLibrary.Helpers;
+@using BlazorBeerCssLibrary.Extensions;
+<i class="@Form.GetEnumDescription() @Size.GetEnumDescription()">@Icon.ToString()</i>
+
+@code {
+    [Parameter] public Icon Icon { get; set; } = new Icon("");
+    [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+}

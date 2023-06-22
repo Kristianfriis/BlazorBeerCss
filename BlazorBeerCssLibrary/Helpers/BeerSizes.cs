@@ -6,6 +6,8 @@ public enum BeerSizes
 {
     [Description("")]
     Default,
+    [Description("tiny")]
+    Tiny,
     [Description("small")]
     Small,
     [Description("medium")]

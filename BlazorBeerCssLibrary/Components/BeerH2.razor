@@ -1,8 +1,8 @@
 ﻿@using BlazorBeerCssLibrary.Helpers;
 @using BlazorBeerCssLibrary.Extensions;
-<h1 class="@Text.GetEnumDescription() @Size.GetEnumDescription()">
+<h2 class="@Text.GetEnumDescription() @Size.GetEnumDescription()">
     @ChildContent
-</h1>
+</h2>
 
 @code {
     [Parameter] public RenderFragment ChildContent { get; set; }

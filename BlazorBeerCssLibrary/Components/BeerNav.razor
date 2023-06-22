@@ -1,0 +1,27 @@
+﻿@using BlazorBeerCssLibrary.Helpers;
+@using BlazorBeerCssLibrary.Extensions;
+
+<nav class="@Position.GetEnumDescription() @Responsive.GetEnumDescription()">
+    @ChildContent
+    <a href="/gmail" class="active">
+        <i>inbox</i>
+        <div>Inbox</div>
+    </a>
+    <a href="/gmail/sent" class="">
+        <i>send</i>
+        <div>Sent</div>
+        </a>
+    <a class="button fill square round extra">
+        <i>add</i>
+        </a>
+    <a href="/gmail/drafts" class="">
+        <i>insert_drive_file</i>
+        <div>Drafts</div>
+    </a>
+</nav>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public BeerPostions Position { get; set; } = BeerPostions.Default;
+    [Parameter] public BeerResponsive Responsive { get; set; } = BeerResponsive.Default;
+}

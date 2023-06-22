@@ -36,6 +36,38 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerH2.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerH3.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerH4.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerH5.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerH6.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySDYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerIcon.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVySWNvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerLink.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyTGluay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerNav.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyTmF2LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Playground/BlazorBeerCss/BlazorBeerCssLibrary/Components/BeerOverlay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWVyT3ZlcmxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

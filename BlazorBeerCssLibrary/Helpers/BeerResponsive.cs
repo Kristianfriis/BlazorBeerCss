@@ -4,6 +4,8 @@ namespace BlazorBeerCssLibrary.Helpers;
 
 public enum BeerResponsive
 {
+    [Description("")]
+    Default,
     [Description("responsive")]
     Responsive,
     [Description("s")]

@@ -6,6 +6,8 @@ public enum BeerForms
 {
     [Description("")]
     Default,
+    [Description("fill")]
+    Fill,
     [Description("border")]
     Border,
     [Description("circle")]

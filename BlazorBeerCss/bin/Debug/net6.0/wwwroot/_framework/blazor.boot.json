@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-R1JlsouwIAVx0f4j8Ku8nSgx9UWnoKc26EJSnZko6MY=",
       "netstandard.dll": "sha256-8Ej3VOdrj8ijDcTS0\/1AEMpisaFDe3Nmj0Fbq5sfZEk=",
       "System.Private.CoreLib.dll": "sha256-tqFypIfntE2p16olQ2cI4rklqWNJqsPJvAoPSChg0H0=",
-      "BlazorBeerCssLibrary.dll": "sha256-iM7ycde1p8BaJLypXMPheyfUPm24PGnXGaEpfhocyu4=",
-      "BlazorBeerCssClient.dll": "sha256-oz2HRZo12QodDGqyxVLjt3gDo8iUtaY0NGCBl8cvk4g="
+      "BlazorBeerCssLibrary.dll": "sha256-za91ZfzX6VeNwvG4vhzNLpioBU8ChdOez8DjDShRX2s=",
+      "BlazorBeerCssClient.dll": "sha256-4h+ARNH4HQ5P6zRVITHEa8v6S9vDZ4l2\/sElPS63q6I="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BlazorBeerCssLibrary.pdb": "sha256-fR6YmFKfHcZbWVM55sjnrZp8BMLtkXwVUdXIB2LCgPI=",
-      "BlazorBeerCssClient.pdb": "sha256-67hSN7cSeLz0IA\/tLZDBrW612bFv\/V5R5phZ+EG8JSU="
+      "BlazorBeerCssLibrary.pdb": "sha256-LsE2nQfDNwAqMAQsQA\/+lc3N7JwDPVHmZYkMN0sz2u8=",
+      "BlazorBeerCssClient.pdb": "sha256-XlPrnXZICXcDbJ3duvD3xJBkeP622OnxdHUYgUZfTA0="
     },
     "runtime": {
       "dotnet.6.0.18.qp9x7makp2.js": "sha256-Iww31ANFa3KZuR4RkhiSYt3FJ7PKpMdeFNq3l3Td1h8=",
