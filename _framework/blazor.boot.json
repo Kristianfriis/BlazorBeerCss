@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "BlazorBeerCss.dll": "sha256-sEzIKbd+akzNvyCuLQidMKtVJnld1qylbLYPPGxoSlU=",
-      "BlazorBeerCssClient.dll": "sha256-rIsPLqpkrwDYBaJ1czpwiGdNdPC\/\/qOC+bIu9fMApAs=",
+      "BlazorBeerCssClient.dll": "sha256-5r3fLAoDx6Kmff9ez91\/fPPtPTiTjdOef7\/YYh5ufRo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-MUHnh2u+L8rBLNLOZg\/VBvwxToODZgaWc8MMY\/MhPM8=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-SintHY\/AqRVi\/eZZwzffERSuvPxwdZw90aK8oBIVGi4=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-BAmMMlWVcgSBgTfTm8pHSgB8HDai3tPKM6L+6d7eIfk=",
