@@ -1,6 +1,38 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
+      "hash": "sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "url": ".nojekyll"
+    },
+    {
+      "hash": "sha256-7pJqr0AifOyXtugQmLoMSQLF3nFHwSr6OGfO3q5JjhY=",
+      "url": "css\/app.css"
+    },
+    {
+      "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "url": "favicon.ico"
+    },
+    {
+      "hash": "sha256-DbpQaq68ZSb5IoPosBErM1QWBfsbTxpJqhU0REi6wP4=",
+      "url": "icon-192.png"
+    },
+    {
+      "hash": "sha256-oEo6d+KqX5fjxTiZk\/w9NB3Mi0+ycS5yLwCKwr4IkbA=",
+      "url": "icon-512.png"
+    },
+    {
+      "hash": "sha256-+Ig6ShKMbbkYJxuHOOrWSpCDz5dLwBgP4zmzeP6p6yk=",
+      "url": "index.html"
+    },
+    {
+      "hash": "sha256-3Qo2tCHHWh5voOKI6YMU+h7MtEYNNQgXDz3lossgovE=",
+      "url": "manifest.json"
+    },
+    {
+      "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
+      "url": "sample-data\/weather.json"
+    },
+    {
       "hash": "sha256-9hjFpEvc2hKkrXX6g9QL\/PLMHhAP4ctc\/9LNFUSRGhI=",
       "url": "_framework\/blazor.webassembly.js"
     },
@@ -33,15 +65,15 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-UdL6kcd937TaDvrGL2FUemGYXsi5WhmLKUj+pBu4PMA=",
+      "hash": "sha256-+iYx4nHQ3bffb5q+sK10yp3rUANU5uzfpVu3uJYouKI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-7vDBLBj6rXk90uPjT7dHsffMTgtcBo06mR\/PGkwILHQ=",
+      "hash": "sha256-GwNZ4uev8cnlqTWFrfefe\/J+YJYbEw6UwiuGCivfTWk=",
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-sq4862XyOWjcH4bvPQg5dV69JMmLWxEujYWN3xQ8Ykw=",
+      "hash": "sha256-Cgguw088TPDpsVnQmnSo1fwAq7rZmzJKMNNaf2YW+us=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
@@ -169,38 +201,6 @@
       "url": "BlazorBeerCssClient.styles.css"
     },
     {
-      "hash": "sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-      "url": ".nojekyll"
-    },
-    {
-      "hash": "sha256-7pJqr0AifOyXtugQmLoMSQLF3nFHwSr6OGfO3q5JjhY=",
-      "url": "css\/app.css"
-    },
-    {
-      "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
-      "url": "favicon.ico"
-    },
-    {
-      "hash": "sha256-DbpQaq68ZSb5IoPosBErM1QWBfsbTxpJqhU0REi6wP4=",
-      "url": "icon-192.png"
-    },
-    {
-      "hash": "sha256-oEo6d+KqX5fjxTiZk\/w9NB3Mi0+ycS5yLwCKwr4IkbA=",
-      "url": "icon-512.png"
-    },
-    {
-      "hash": "sha256-+Ig6ShKMbbkYJxuHOOrWSpCDz5dLwBgP4zmzeP6p6yk=",
-      "url": "index.html"
-    },
-    {
-      "hash": "sha256-3Qo2tCHHWh5voOKI6YMU+h7MtEYNNQgXDz3lossgovE=",
-      "url": "manifest.json"
-    },
-    {
-      "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
-      "url": "sample-data\/weather.json"
-    },
-    {
       "hash": "sha256-jT0EfCvHs9nOK+TRFDhsQYC8DEwmOMk1xNYKev900q4=",
       "url": "_content\/BlazorBeerCss\/css\/beercss\/beer.min.css"
     },
@@ -217,5 +217,5 @@
       "url": "_content\/BlazorBeerCss\/css\/beercss\/material-symbols-outlined.woff2"
     }
   ],
-  "version": "jt2CStFb"
+  "version": "bu4h2wse"
 };
