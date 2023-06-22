@@ -1,5 +1,6 @@
 # BlazorBeerCSS WIP
 A repo to create a Blazor component library based on [BeerCSS](https://github.com/beercss/beercss)
+A demo can be seen here: [Demo](https://kristianfriis.github.io/BlazorBeerCss/)
 
 ## Prerequisities
 | BlazorBeerCss | .NET | Support |
