@@ -1,9 +1,19 @@
 ﻿@using BlazorBeerCss.Extensions;
 @using BlazorBeerCss.Helpers;
 @using Microsoft.AspNetCore.Components.Routing;
-<NavLink href="@Href" Match="@(Href == "/" || Href == "" ? NavLinkMatch.All : NavLinkMatch.Prefix)">
-    @ChildContent
-</NavLink>
+@if (Href == "/" || Href == "")
+{
+    <NavLink href="@Href" Match="NavLinkMatch.All">
+        @ChildContent
+    </NavLink>
+    
+}else
+{
+    <NavLink href="@Href">
+        @ChildContent
+    </NavLink>
+}
+
 
 @code {
     [Parameter] public string Href { get; set; } = "";
