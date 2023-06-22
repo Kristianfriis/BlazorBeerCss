@@ -1,6 +1,6 @@
 ﻿@using BlazorBeerCss.Extensions;
 @using BlazorBeerCss.Helpers;
-<button @onclick="InvokeParentMethod" class="@Size.GetEnumDescription() @Color.GetEnumDescription()">
+<button @onclick="InvokeParentMethod" class="@Size.GetEnumDescription() @Color.GetEnumDescription() @Theme.GetEnumDescription() @Form.GetEnumDescription()">
     @ChildContent
 </button>
 
@@ -8,8 +8,10 @@
     [Parameter] public EventCallback OnClick { get; set; }
     [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
     [Parameter] public BeerColors Color { get; set; } = BeerColors.Default;
+    [Parameter] public BeerThemes Theme { get; set; } = BeerThemes.Default;
+    [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
 
-    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 
     bool hasDelegate => OnClick.HasDelegate;
 

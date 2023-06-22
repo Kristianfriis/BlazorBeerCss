@@ -1,39 +1,81 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">BlazorBeerCss</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿<BeerNav Responsive="BeerResponsive.Small" Position="@NavBeerPostion">
+    <BeerLink Href="/">
+        <BeerIcon Icon="BeerIcons.Iconhome"></BeerIcon>
+        <BeerSpan>Home</BeerSpan>
+    </BeerLink>
+    <BeerLink Href="counter">
+        <BeerIcon Icon="BeerIcons.Iconadd"></BeerIcon>
+        <BeerSpan>Counter</BeerSpan>
+    </BeerLink>
+    <BeerLink Href="fetchdata">
+        <BeerIcon Icon="BeerIcons.Iconlist"></BeerIcon>
+        <BeerSpan>Fetch Data</BeerSpan>
+    </BeerLink>
+    <BeerButton OnClick="@(() => SetNavPosition(BeerPostions.Top))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+        <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowUpward"></BeerIcon>
+    </BeerButton>
+    <BeerButton OnClick="@(() => SetNavPosition(BeerPostions.Bottom))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+        <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowDownward"></BeerIcon>
+    </BeerButton>
+    <BeerButton OnClick="SetDarkmode" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+        <BeerIcon Form="BeerForms.Round" Icon="@(isDarkMode ? BeerIcons.IcondarkMode : BeerIcons.IconligtMode)"></BeerIcon>
+    </BeerButton>
+</BeerNav>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-    </nav>
-</div>
+<BeerNavSide Position="@BeerPostion">
+    <BeerImage Form="BeerForms.Circle" Src="/favicon.png"></BeerImage>
+    <BeerLink Href="/">
+        <BeerIcon Icon="BeerIcons.Iconhome"></BeerIcon>
+        <BeerSpan>Home</BeerSpan>
+    </BeerLink>
+    <BeerLink Href="counter">
+        <BeerIcon Icon="BeerIcons.Iconadd"></BeerIcon>
+        <BeerSpan>Counter</BeerSpan>
+    </BeerLink>
+    <BeerLink Href="fetchdata">
+        <BeerIcon Icon="BeerIcons.Iconlist"></BeerIcon>
+        <BeerSpan>Fetch Data</BeerSpan>
+    </BeerLink>
+    <BeerButton OnClick="@(() => SetNavSide(BeerPostions.Right))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+        <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowForward"></BeerIcon>
+    </BeerButton>
+    <BeerButton OnClick="@(() => SetNavSide(BeerPostions.Left))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+        <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowBack"></BeerIcon>
+    </BeerButton>
+    <BeerButton OnClick="SetDarkmode" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+        <BeerIcon Form="BeerForms.Round" Icon="@(isDarkMode ? BeerIcons.IcondarkMode : BeerIcons.IconligtMode)"></BeerIcon>
+    </BeerButton>
+</BeerNavSide>
 
 @code {
-    private bool collapseNavMenu = true;
+    [Inject] public BeerThemeChanger? beerThemeChanger { get; set; }
+    bool isDarkMode = false;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    BeerPostions BeerPostion = BeerPostions.Left;
+    BeerPostions NavBeerPostion = BeerPostions.Bottom;
 
-    private void ToggleNavMenu()
+    void SetNavSide(BeerPostions beerPostion)
     {
-        collapseNavMenu = !collapseNavMenu;
+        if (beerPostion == BeerPostion)
+            return;
+
+        BeerPostion = beerPostion;
+    }
+
+    void SetNavPosition(BeerPostions beerPostion)
+    {
+        if (beerPostion == NavBeerPostion)
+            return;
+
+        NavBeerPostion = beerPostion;
+    }
+
+    public async Task SetDarkmode()
+    {
+        if (beerThemeChanger != null)
+        {
+            isDarkMode = !isDarkMode;
+            await beerThemeChanger.SetDarkMode(isDarkMode);
+        }
     }
 }

@@ -1,0 +1,8 @@
+﻿@using BlazorBeerCss.Helpers;
+@using BlazorBeerCss.Extensions;
+<img class="@Form.GetEnumDescription()" src="@Src">
+
+@code {
+    [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
+    [Parameter] public string Src { get; set; } = "";
+}

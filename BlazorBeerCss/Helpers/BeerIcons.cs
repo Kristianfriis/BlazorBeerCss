@@ -3,6 +3,8 @@
 public static class BeerIcons
 {
     public static Icon Icon10K = new Icon("10k");
+    public static Icon IconligtMode = new Icon("light_mode");
+    public static Icon IcondarkMode = new Icon("dark_mode");
     public static Icon Icon10Mp = new Icon("10mp");
     public static Icon Icon11Mp = new Icon("11mp");
     public static Icon Icon12Mp = new Icon("12mp");
@@ -136,20 +138,20 @@ public static class BeerIcons
     public static Icon Iconapps = new Icon("apps");
     public static Icon Iconarchitecture = new Icon("architecture");
     public static Icon Iconarchive = new Icon("archive");
-    public static Icon IconarrowBack = new Icon("arrow-back");
+    public static Icon IconarrowBack = new Icon("arrow_back");
     public static Icon IconarrowBackIos = new Icon("arrow-back-ios");
     public static Icon IconarrowCircleDown = new Icon("arrow-circle-down");
     public static Icon IconarrowCircleUp = new Icon("arrow-circle-up");
-    public static Icon IconarrowDownward = new Icon("arrow-downward");
+    public static Icon IconarrowDownward = new Icon("arrow_downward");
     public static Icon IconarrowDropDown = new Icon("arrow-drop-down");
     public static Icon IconarrowDropDownCircle = new Icon("arrow-drop-down-circle");
     public static Icon IconarrowDropUp = new Icon("arrow-drop-up");
-    public static Icon IconarrowForward = new Icon("arrow-forward");
+    public static Icon IconarrowForward = new Icon("arrow_forward");
     public static Icon IconarrowForwardIos = new Icon("arrow-forward-ios");
     public static Icon IconarrowLeft = new Icon("arrow-left");
     public static Icon IconarrowRight = new Icon("arrow-right");
     public static Icon IconarrowRightAlt = new Icon("arrow-right-alt");
-    public static Icon IconarrowUpward = new Icon("arrow-upward");
+    public static Icon IconarrowUpward = new Icon("arrow_upward");
     public static Icon IconartTrack = new Icon("art-track");
     public static Icon Iconarticle = new Icon("article");
     public static Icon IconaspectRatio = new Icon("aspect-ratio");

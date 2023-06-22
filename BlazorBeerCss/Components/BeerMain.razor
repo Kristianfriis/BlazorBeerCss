@@ -1,0 +1,14 @@
+﻿@using BlazorBeerCss.Helpers;
+@using BlazorBeerCss.Extensions;
+@inherits LayoutComponentBase
+
+<main class="@Responsive.GetEnumDescription() @Position.GetEnumDescription() @Theme.GetEnumDescription()">
+    @ChildContent
+</main>
+
+@code {
+    [Parameter] public BeerResponsive Responsive { get; set; } = BeerResponsive.Default;
+    [Parameter] public BeerPostions Position { get; set; } = BeerPostions.Default;
+    [Parameter] public BeerThemes Theme { get; set; } = BeerThemes.Default;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

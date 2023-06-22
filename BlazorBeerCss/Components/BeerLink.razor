@@ -1,14 +1,11 @@
-﻿@using BlazorBeerCss.Helpers;
-<a href="@Href" class="">
-    @if (!string.IsNullOrEmpty(Icon.ToString()))
-    {
-        <i>@Icon.ToString()</i>
-    }
-    <div>@Title</div>
-</a>
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+@using Microsoft.AspNetCore.Components.Routing;
+<NavLink href="@Href" Match="@(Href == "/" || Href == "" ? NavLinkMatch.All : NavLinkMatch.Prefix)">
+    @ChildContent
+</NavLink>
 
 @code {
     [Parameter] public string Href { get; set; } = "";
-    [Parameter] public string Title { get; set; } = "";
-    [Parameter] public Icon Icon { get; set; } = new Icon("");
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 }
