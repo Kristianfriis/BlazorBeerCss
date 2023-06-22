@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BlazorBeerCss</title>
-    <base href="/" />
+    <base href="/BlazorBeerCss/" />
     <link href="_content/BlazorBeerCss/css/beercss/beer.min.css" rel="stylesheet">
     <script type="module" src="_content/BlazorBeerCss/css/beercss/beer.min.js"></script>
     <script type="module" src="_content/BlazorBeerCss/css/beercss/material-dynamic-colors.min.js"></script>
@@ -54,27 +54,6 @@
             }
         }(window.location))
     </script>
-    <!-- Set in code below, dynamically based on hosting <base href="/" />  -->
-    <script>
-        // set base href dynamically based on hosting location
-        // All route have /q/ prefix to stop this code from failing if a user bookmars "http://server/somepath/q/login" for example
-        // Base href only used up to the fixed /q/ prefix (if present)
-        var base = document.createElement('base');
-        var newBase = `${window.location.pathname}`;
-        // Strip if /q/ present
-        if (newBase.includes("/q/")) {
-            newBase = newBase.substring(1, newBase.indexOf("/q/") + 1);
-        }
-        // Ensure initial slash present
-        newBase = (newBase.startsWith("/") ? "" : "/") + newBase;
-        // Ensure trailing slash present
-        newBase += (newBase.endsWith("/") ? "" : "/");
-        base.href = newBase;
-        console.log(`Base href set to ${newBase}`);
-        document.getElementsByTagName('head')[0].appendChild(base);
-
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
