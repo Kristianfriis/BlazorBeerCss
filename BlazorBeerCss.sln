@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBeerCssClient", "BlazorBeerCss\BlazorBeerCssClient.csproj", "{8BF06EB0-9A7F-483F-AB08-990C7F6CED5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBeerCssLibrary", "BlazorBeerCssLibrary\BlazorBeerCssLibrary.csproj", "{EC5F70D2-9260-4CF9-AEB7-DD5B6FE33FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBeerCss", "BlazorBeerCssLibrary\BlazorBeerCss.csproj", "{EC5F70D2-9260-4CF9-AEB7-DD5B6FE33FE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{573D74D8-8C85-440D-A729-CC804DDCC8F5}"
 	ProjectSection(SolutionItems) = preProject
