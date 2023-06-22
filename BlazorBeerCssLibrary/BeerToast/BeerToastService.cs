@@ -1,4 +1,4 @@
-﻿namespace BlazorBeerCssLibrary.BeerToast;
+﻿namespace BlazorBeerCss.BeerToast;
 
 public class BeerToastService
 {

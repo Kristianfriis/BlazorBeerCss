@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorBeerCssLibrary\BlazorBeerCssLibrary.csproj" />
+    <ProjectReference Include="..\BlazorBeerCssLibrary\BlazorBeerCss.csproj" />
   </ItemGroup>
 
   <ItemGroup>
