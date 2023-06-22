@@ -25,16 +25,16 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-eKtsvjhdUttGAdreMVCyECDXz0zw4ApODO0OQ705Kts=",
+      "hash": "sha256-hp7dhRxupMOAdJzRiO7oirH0SwUlOeITPDilYYFF4+k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-iokR8rDFmEPTp1kYp7SNASMcyeMs\/SO4ENg62PkX4OM=",
-      "url": "_framework\/BlazorBeerCssClient.dll"
+      "hash": "sha256-7vDBLBj6rXk90uPjT7dHsffMTgtcBo06mR\/PGkwILHQ=",
+      "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-yGDKYxaAP3keLVzro02JUPOnjsIXAzHf3A5wgjfA8XA=",
-      "url": "_framework\/BlazorBeerCssLibrary.dll"
+      "hash": "sha256-sq4862XyOWjcH4bvPQg5dV69JMmLWxEujYWN3xQ8Ykw=",
+      "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
       "hash": "sha256-Zt6b0PfHT8jWYK6adTq5dsOdjqbortgI\/FjqlalTELQ=",
@@ -185,7 +185,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-NW6Q60HAZPqyS0zxE6jSR86fN2X\/JM\/D76jw19p9mAI=",
+      "hash": "sha256-mWJt4mkVh53KG20obKrYQBrxqS24M3HrZkB1nK4URI8=",
       "url": "index.html"
     },
     {
@@ -198,20 +198,20 @@
     },
     {
       "hash": "sha256-jT0EfCvHs9nOK+TRFDhsQYC8DEwmOMk1xNYKev900q4=",
-      "url": "_content\/BlazorBeerCssLibrary\/css\/beercss\/beer.min.css"
+      "url": "_content\/BlazorBeerCss\/css\/beercss\/beer.min.css"
     },
     {
       "hash": "sha256-JnH7ZQeMei\/eaAUj1UezYj10gWDe\/+A8rwkCeatl7hY=",
-      "url": "_content\/BlazorBeerCssLibrary\/css\/beercss\/beer.min.js"
+      "url": "_content\/BlazorBeerCss\/css\/beercss\/beer.min.js"
     },
     {
       "hash": "sha256-gWztIMYjeNunOIe\/Lajj9I3A4o1u14WrxNNPrs5IV1E=",
-      "url": "_content\/BlazorBeerCssLibrary\/css\/beercss\/material-dynamic-colors.min.js"
+      "url": "_content\/BlazorBeerCss\/css\/beercss\/material-dynamic-colors.min.js"
     },
     {
       "hash": "sha256-MLaeuXBQdRaneG\/\/TvAXxQ\/Pa5s1Ev83WCqPb2qMWUk=",
-      "url": "_content\/BlazorBeerCssLibrary\/css\/beercss\/material-symbols-outlined.woff2"
+      "url": "_content\/BlazorBeerCss\/css\/beercss\/material-symbols-outlined.woff2"
     }
   ],
-  "version": "knf8u8U8"
+  "version": "nVYwsn3f"
 };
