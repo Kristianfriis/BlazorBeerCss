@@ -1,0 +1,10 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+
+<div class="row @Alignement.GetEnumDescription()">
+    @ChildContent
+</div>
+@code {
+    [Parameter] public BeerAlignments Alignement { get; set; } = BeerAlignments.Default;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

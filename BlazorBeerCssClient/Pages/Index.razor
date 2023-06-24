@@ -43,10 +43,22 @@
     <BeerCard>
         <BeerH6>This a card</BeerH6>
     </BeerCard>
+
+    <BeerSpace Space="BeerSpaces.LargeSpace"></BeerSpace>
+
+    <SpacesComponent></SpacesComponent>
+
+    <BeerSpace Space="BeerSpaces.LargeSpace"></BeerSpace>
+
+    <SwitchesComponent></SwitchesComponent>
+
+    <BeerSpace Space="BeerSpaces.Space"></BeerSpace>
 </BeerPage>
 
 @code {
     bool active = false;
+    bool switchFalse = false;
+    bool switchTrue = false;
 
     void test()
     {

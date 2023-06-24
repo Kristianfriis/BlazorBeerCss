@@ -1,0 +1,53 @@
+﻿<BeerH5>Switches</BeerH5>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerH6>Default switch</BeerH6>
+<BeerRow>
+    <BeerField Alignement="BeerAlignments.MiddleAlign">
+        <BeerNav>
+            <BeerSwitch @bind-Value="switchFalse"></BeerSwitch>
+            <BeerSwitch @bind-Value="switchTrue"></BeerSwitch>
+            <BeerSwitch @bind-Value="switchFalse" Disabled="true"></BeerSwitch>
+            <BeerSwitch @bind-Value="switchTrue" Disabled="true"></BeerSwitch>
+        </BeerNav>
+    </BeerField>
+</BeerRow>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerH6>Switch with icons</BeerH6>
+<BeerRow>
+    <BeerField Alignement="BeerAlignments.MiddleAlign">
+        <BeerNav>
+            <BeerSwitch Value="true" FirstIcon="BeerIcons.Iconwifi" IconSwitch="true"></BeerSwitch>
+            <BeerSwitch Value="true" FirstIcon="BeerIcons.Iconbluetooth" IconSwitch="true"></BeerSwitch>
+            <BeerSwitch Value="true" FirstIcon="BeerIcons.IcondarkMode" IconSwitch="true"></BeerSwitch>
+            <BeerSwitch Value="true" FirstIcon="BeerIcons.Iconclose" SecondIcon="BeerIcons.Icondone" IconSwitch="true"></BeerSwitch>
+        </BeerNav>
+    </BeerField>
+</BeerRow>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerH6>Switch in field elements</BeerH6>
+<BeerField Alignement="BeerAlignments.MiddleAlign">
+    <BeerNav>
+        <BeerFieldTextElement Size="BeerSizes.Max" Title="Title" Description="some text here"></BeerFieldTextElement>
+        <BeerSwitch Value="false"></BeerSwitch>
+    </BeerNav>
+</BeerField>
+<BeerField Alignement="BeerAlignments.MiddleAlign" HelperText="Helper Text">
+    <BeerNav>
+        <BeerFieldTextElement Size="BeerSizes.Max" Title="Title" Description="some text here"></BeerFieldTextElement>
+        <BeerSwitch Value="false"></BeerSwitch>
+    </BeerNav>
+</BeerField>
+<BeerField Alignement="BeerAlignments.MiddleAlign" ErrorText="Error text">
+    <BeerNav>
+        <BeerFieldTextElement Size="BeerSizes.Max" Title="Title" Description="some text here"></BeerFieldTextElement>
+        <BeerSwitch Value="false"></BeerSwitch>
+    </BeerNav>
+</BeerField>
+
+@code {
+    bool switchFalse = false;
+    bool switchTrue = false;
+}

@@ -1,0 +1,24 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+
+<div class="field @Alignement.GetEnumDescription() @Type.GetEnumDescription()">
+    @ChildContent
+    @if (!string.IsNullOrEmpty(HelperText))
+    {
+        <span class="helper">Helper text</span>
+    }
+    @if (!string.IsNullOrEmpty(ErrorText))
+    {
+      <span class="error">Error text</span>
+    }
+</div>
+
+@code {
+    [Parameter] public BeerAlignments Alignement { get; set; } = BeerAlignments.Default;
+    [Parameter] public BeerFieldTypes Type { get; set; } = BeerFieldTypes.Default;
+    [Parameter] public string? ErrorText { get; set; } = string.Empty;
+    [Parameter] public string? HelperText { get; set; } = string.Empty;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+
+}

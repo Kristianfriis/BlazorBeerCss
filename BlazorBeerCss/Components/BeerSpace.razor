@@ -1,0 +1,7 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+<div class="@Space.GetEnumDescription()"></div>
+
+@code {
+    [Parameter] public BeerSpaces Space { get; set; } = BeerSpaces.Default;
+}

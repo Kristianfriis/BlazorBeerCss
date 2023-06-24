@@ -1,0 +1,12 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+
+<div class="@Size.GetEnumDescription()">
+    <h6>@Title</h6>
+    <div>@Description</div>
+</div>
+@code {
+    [Parameter] public string Title { get; set; } = String.Empty;
+    [Parameter] public string Description { get; set; } = String.Empty;
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+}

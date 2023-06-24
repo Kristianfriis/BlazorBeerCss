@@ -15,5 +15,23 @@ public enum BeerSizes
     [Description("large")]
     Large,
     [Description("extra")]
-    Extra
+    Extra,
+    [Description("wrap")]
+    Wrap,
+    [Description("no-wrap")]
+    NoWrap,
+    [Description("max")]
+    Max,
+    [Description("small-width")]
+    SmallWidth,
+    [Description("medium-width")]
+    MediumWidth,
+    [Description("large-width")]
+    LargeWidth,
+    [Description("small-height")]
+    SmallHeight,
+    [Description("medium-height")]
+    MediumHeight,
+    [Description("large-height")]
+    LargeHeight
 }
