@@ -5,6 +5,10 @@
       "url": ".nojekyll"
     },
     {
+      "hash": "sha256-dEQK5GdGY4T3p+MaqRoeNGLaAuW5CSxAJwHBH1Q0ovA=",
+      "url": "beer-and-woman.jpg"
+    },
+    {
       "hash": "sha256-7pJqr0AifOyXtugQmLoMSQLF3nFHwSr6OGfO3q5JjhY=",
       "url": "css\/app.css"
     },
@@ -69,19 +73,19 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-Ct3CqTgca2kysLSwNfnkcqMZI2RlGN67H1fDvTuM044=",
+      "hash": "sha256-nBh2SGOISO\/FQWeeTflzWXF1hUrRoNGfDhYIVdoXrLA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-sEzIKbd+akzNvyCuLQidMKtVJnld1qylbLYPPGxoSlU=",
+      "hash": "sha256-\/GFtDYz1a0Quq8bvjdP4tVn0fi80ho6\/7fFDeVomzMw=",
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-5r3fLAoDx6Kmff9ez91\/fPPtPTiTjdOef7\/YYh5ufRo=",
+      "hash": "sha256-Mb+\/UmpelinQ7RGaVDKb2Y50g80MkXssk48zIxiLUlo=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
-      "hash": "sha256-MUHnh2u+L8rBLNLOZg\/VBvwxToODZgaWc8MMY\/MhPM8=",
+      "hash": "sha256-6eX87CROATblVs2cXDwXjgAT4IS39DY1jmqmPgB4KxI=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -169,7 +173,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-yOZ9NqbrXLVTwm4ElNI7ZpvLXPo+IFaRbkDoUN1zDmc=",
+      "hash": "sha256-iDwKKwfJ\/GNxsK4IzHKsgQISICkDONWkGTrS9L9LYAI=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -185,7 +189,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-6duv2q2TBkKAD3WCLdwQifO2waR5jGNBZW3jcEWnB3E=",
+      "hash": "sha256-FGugEfMGMwCPiMnlbO9jeXZ3veGEK8qqMo8CfMjv2Z8=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -225,5 +229,5 @@
       "url": "_content\/BlazorBeerCss\/js\/interop.js"
     }
   ],
-  "version": "qm4w41hS"
+  "version": "GJ33sTBz"
 };
