@@ -7,8 +7,8 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "BlazorBeerCss.dll": "sha256-\/GFtDYz1a0Quq8bvjdP4tVn0fi80ho6\/7fFDeVomzMw=",
-      "BlazorBeerCssClient.dll": "sha256-Mb+\/UmpelinQ7RGaVDKb2Y50g80MkXssk48zIxiLUlo=",
+      "BlazorBeerCss.dll": "sha256-fMabkf19bJqeWYvyndDNqMMD9zum2XVz9i\/VUKbTR2c=",
+      "BlazorBeerCssClient.dll": "sha256-NigEx74EIwNcoWOInrlZBiU5pL\/AXOc85cskloZHsPs=",
       "Microsoft.AspNetCore.Components.dll": "sha256-6eX87CROATblVs2cXDwXjgAT4IS39DY1jmqmPgB4KxI=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-SintHY\/AqRVi\/eZZwzffERSuvPxwdZw90aK8oBIVGi4=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-BAmMMlWVcgSBgTfTm8pHSgB8HDai3tPKM6L+6d7eIfk=",

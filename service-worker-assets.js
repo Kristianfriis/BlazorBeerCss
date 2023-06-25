@@ -9,7 +9,7 @@
       "url": "beer-and-woman.jpg"
     },
     {
-      "hash": "sha256-7pJqr0AifOyXtugQmLoMSQLF3nFHwSr6OGfO3q5JjhY=",
+      "hash": "sha256-S8tvznHvALnSrImtn9XqqGFm71HUg73VXAJJ0P+F3aM=",
       "url": "css\/app.css"
     },
     {
@@ -73,15 +73,15 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-nBh2SGOISO\/FQWeeTflzWXF1hUrRoNGfDhYIVdoXrLA=",
+      "hash": "sha256-S+MrvB4Lo\/bg3z2YwYCGhdw4+7obAeHDlbrrRzasHxc=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-\/GFtDYz1a0Quq8bvjdP4tVn0fi80ho6\/7fFDeVomzMw=",
+      "hash": "sha256-fMabkf19bJqeWYvyndDNqMMD9zum2XVz9i\/VUKbTR2c=",
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-Mb+\/UmpelinQ7RGaVDKb2Y50g80MkXssk48zIxiLUlo=",
+      "hash": "sha256-NigEx74EIwNcoWOInrlZBiU5pL\/AXOc85cskloZHsPs=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
@@ -205,7 +205,7 @@
       "url": "_framework\/System.Threading.dll"
     },
     {
-      "hash": "sha256-2oKVFJkjsw1GXSLeTLbce5DAz7vBdQIkykR8EkKvMjg=",
+      "hash": "sha256-7FG6vig9pBIOJ1DXMfiQvN0cFsGfxYIyzUNLLErkYAA=",
       "url": "BlazorBeerCssClient.styles.css"
     },
     {
@@ -229,5 +229,5 @@
       "url": "_content\/BlazorBeerCss\/js\/interop.js"
     }
   ],
-  "version": "GJ33sTBz"
+  "version": "E08Q3JGc"
 };
