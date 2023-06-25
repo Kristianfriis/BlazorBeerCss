@@ -73,7 +73,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-S+MrvB4Lo\/bg3z2YwYCGhdw4+7obAeHDlbrrRzasHxc=",
+      "hash": "sha256-C4LNbzxjtD7tqRRIZEAU88yn0UrCmeCfsyQ\/KEMusA8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -81,7 +81,7 @@
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-NigEx74EIwNcoWOInrlZBiU5pL\/AXOc85cskloZHsPs=",
+      "hash": "sha256-NAoNueNT7PrQ2wZguGgjW8VU+ppFlvgM66pg+eWSgLY=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
@@ -229,5 +229,5 @@
       "url": "_content\/BlazorBeerCss\/js\/interop.js"
     }
   ],
-  "version": "E08Q3JGc"
+  "version": "9MSbQDb8"
 };
