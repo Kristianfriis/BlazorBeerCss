@@ -1,10 +1,12 @@
 ﻿@using BlazorBeerCss.Extensions;
 @using BlazorBeerCss.Helpers;
 
-<div class="row @Alignement.GetEnumDescription()">
+<div class="row @Alignement.GetEnumDescription() @Space.GetEnumDescription() @Size.GetEnumDescription()">
     @ChildContent
 </div>
 @code {
     [Parameter] public BeerAlignments Alignement { get; set; } = BeerAlignments.Default;
+    [Parameter] public BeerSpaces Space { get; set; } = BeerSpaces.Default;
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
     [Parameter] public RenderFragment? ChildContent { get; set; }
 }

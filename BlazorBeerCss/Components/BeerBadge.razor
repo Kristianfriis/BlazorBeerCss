@@ -1,0 +1,29 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+<a>
+    <span class="badge @Form.GetEnumDescription() @Border.GetEnumDescription() @Color.GetEnumDescription() @GetTopOrBottom() @GetRightOrLeft()">@ChildContent</span>
+    @if(Icon != null)
+    {
+        <i>@Icon</i>
+    }
+</a>
+
+@code {
+    [Parameter] public BeerBorders Border { get; set; } = BeerBorders.Default;
+    [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
+    [Parameter] public BeerColors Color { get; set; } = BeerColors.Default;
+    [Parameter] public bool Top { get; set; } = true;
+    [Parameter] public bool Right { get; set; } = true;
+    [Parameter] public Icon? Icon { get; set; } = null;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    string GetTopOrBottom()
+    {
+        return Top ? "" : "bottom";
+    }
+
+    string GetRightOrLeft()
+    {
+        return Right ? "" : "left";
+    }
+}
