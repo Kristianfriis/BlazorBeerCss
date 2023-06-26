@@ -1,0 +1,36 @@
+﻿<CascadingValue Value="this">
+    @ChildContent
+</CascadingValue>
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string? Name { get; set; }
+    [Parameter] public EventCallback<string> ValueChanged { get; set; }
+    [Parameter]
+    public string Value { get; set; } = string.Empty;
+
+    // Internal field holding checkbox state
+    private string value;
+
+    internal List<SimpleRadio> Radios = new List<SimpleRadio>();
+
+    internal SimpleRadio SelectedRadio;
+    internal void AddRadio(SimpleRadio radio)
+    {
+        Radios.Add(radio);
+        if (Radios.Count == 1)
+            SelectedRadio = radio;
+        StateHasChanged();
+    }
+
+    internal void SetSelectedRadio(SimpleRadio radio)
+    {
+        SelectedRadio = radio;
+
+        if (radio.Value != null)
+        {
+            ValueChanged.InvokeAsync(SelectedRadio.Value);
+        }
+
+        StateHasChanged();
+    }
+}

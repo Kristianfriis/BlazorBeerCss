@@ -15,17 +15,18 @@
 <BeerH6>Radio in field elements</BeerH6>
 <BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
 
-<input type="radio" checked="@(valueTest == "1")"
-       name="Gender" @onchange="@(() => valueTest = "1")" />
-<label>1</label>
+<SimpleRadioContainer @bind-Value="valueTest">
+    <SimpleRadio Title="1" Value="1"></SimpleRadio>
+    <SimpleRadio Title="2" Value="2"></SimpleRadio>
+    <SimpleRadio Title="3" Value="3"></SimpleRadio>
+</SimpleRadioContainer>
 
-<input type="radio" checked="@(valueTest == "2")"
-       name="Gender" @onchange="@(() => valueTest = "2")" />
-<label>1</label>
-
-<input type="radio" checked="@(valueTest == "3")"
-       name="Gender" @onchange="@(() => valueTest = "3")" />
-<label>1</label>
+<BeerButton OnClick="Test">test</BeerButton>
 @code {
     string valueTest = "1";
+
+    void Test()
+    {
+        Console.WriteLine("current value: " + valueTest);
+    }
 }

@@ -1,0 +1,8 @@
+﻿<input type="radio" checked="@(Parent!.SelectedRadio == this)"
+       name="Gender" @onchange="@(() => Parent!.SetSelectedRadio(this))" />
+<label>@Title</label>
+@code {
+    [CascadingParameter] private SimpleRadioContainer Parent { get; set; }
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? Value { get; set; }
+}
