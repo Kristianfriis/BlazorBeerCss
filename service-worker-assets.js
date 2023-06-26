@@ -73,19 +73,19 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-CTKq2\/gqUuUlRWgNHaRlIxunPv0CaD4Xfi1y0\/FT5hI=",
+      "hash": "sha256-sgV\/0dnmK8zWkYYoyWFINEYi+gZDlO589L+H+gJnxP8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-zPFAd+KA\/cAB1qUUzFeytIxfsbXURFUcX1v0HZ5QIb8=",
+      "hash": "sha256-c9IxxEJvj3k79l6RwKJyHpYpKumZV5palQXuctNpej8=",
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-tucuNnMUjxniicpPYYhAr9XPNu1TAGmR2Es+PzeilXE=",
+      "hash": "sha256-GucfCxn0dT7v8jcv9QJam97WlwioYQLJxfpn9Azkep4=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
-      "hash": "sha256-6eX87CROATblVs2cXDwXjgAT4IS39DY1jmqmPgB4KxI=",
+      "hash": "sha256-HPBtOuZQXcCGGbG2ynHuFpM8DBjTi7mSs+U2UepXIKw=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -145,7 +145,7 @@
       "url": "_framework\/System.Collections.Concurrent.dll"
     },
     {
-      "hash": "sha256-G94xcGE+IIiB\/K2MtdqP20VAXntnCx7nqXatEZnbzJc=",
+      "hash": "sha256-xX6ItYgiAsx5YX9e1xqZvqzMs0POqJ+SI0iw1VZhi6Y=",
       "url": "_framework\/System.Collections.dll"
     },
     {
@@ -155,6 +155,10 @@
     {
       "hash": "sha256-C\/RZsYsMKxyFebidGiVhwYgWuT8hcxGQKqNryCJpVuY=",
       "url": "_framework\/System.ComponentModel.Primitives.dll"
+    },
+    {
+      "hash": "sha256-IeF7GmdglJi6lxctoDQSUmkvP8ymTK0I5glO5Wh+Zc0=",
+      "url": "_framework\/System.Console.dll"
     },
     {
       "hash": "sha256-2TWXJS9n3nYCIui4FZHmQ\/SGr+hwUd8T+l0uO7TTI28=",
@@ -173,7 +177,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-CKeNlf5c8uI0MNQGLSJc8mKS2IuxT9OHgDrBBBk\/\/TE=",
+      "hash": "sha256-crd18Skdf\/djOhvQWywzNPK0mECLksrTAFEY2tmlwLs=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -189,7 +193,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-4mxzZtLanCBy460HWjv+gagDRK8QvpwOkwcprk2XFB0=",
+      "hash": "sha256-xrwaVhe0DFPAS7gaoEvJn0DQdDRmvfqKYsqDx8pdy64=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -229,5 +233,5 @@
       "url": "_content\/BlazorBeerCss\/js\/interop.js"
     }
   ],
-  "version": "EEUyd0ee"
+  "version": "NinGB1z0"
 };
