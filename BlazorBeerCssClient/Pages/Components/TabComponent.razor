@@ -1,0 +1,67 @@
+﻿<BeerH5>Tabs</BeerH5>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow>
+    <BeerCheckbox @bind-IsChecked="@Vertical">vertical</BeerCheckbox>
+    <BeerCheckbox @bind-IsChecked="@Minimum">minimum</BeerCheckbox>
+</BeerRow>
+<BeerH6>Default</BeerH6>
+<BeerTabs>
+    <BeerTab Text="Tab 1">
+        <h5>Tab 1</h5>
+    </BeerTab>    
+    <BeerTab Text="Tab 2">
+        <h5>Tab 2</h5>
+    </BeerTab>
+    <BeerTab Text="Tab 3">
+        <h5>Tab 3</h5>
+    </BeerTab>
+</BeerTabs>
+
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerH4>Tabs with Icons</BeerH4>
+<BeerTabs Direction="@SetDirection()" MaxSize="@Minimum">
+    <BeerTab Text="Tab 1" Icon="BeerIcons.Iconhome">
+        <h5>Tab 1</h5>
+    </BeerTab>
+    <BeerTab Text="Tab 2" Icon="BeerIcons.Iconhome">
+        <h5>Tab 2</h5>
+    </BeerTab>
+    <BeerTab Text="Tab 3" Icon="BeerIcons.Iconhome">
+        <h5>Tab 3</h5>
+    </BeerTab>
+</BeerTabs>
+
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerH4>Tabs with Images</BeerH4>
+<BeerTabs Direction="@SetDirection()" MaxSize="@Minimum">
+    <BeerTab Text="Tab 1" Image="favicon.png">
+        <h5>Tab 1</h5>
+    </BeerTab>
+    <BeerTab Text="Tab 2" Image="favicon.png">
+        <h5>Tab 2</h5>
+    </BeerTab>
+    <BeerTab Text="Tab 3" Image="favicon.png">
+        <h5>Tab 3</h5>
+    </BeerTab>
+</BeerTabs>
+
+<BeerButton OnClick="test">Test</BeerButton>
+
+@code {
+    private bool Vertical { get; set; } = true;
+    private bool Minimum  {get; set;}  = true;
+
+    BeerDirections SetDirection()
+    {
+        if (Vertical)
+            return BeerDirections.Default;
+        else
+            return BeerDirections.Vertical;
+    }
+
+    void test()
+    {
+        Console.WriteLine("Size: " + Minimum);
+        Console.WriteLine("Direction: " + Vertical);
+    }
+}

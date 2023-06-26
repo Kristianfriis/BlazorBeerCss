@@ -1,7 +1,7 @@
-﻿@using BlazorBeerCss.Extensions;
+﻿@*@using BlazorBeerCss.Extensions;
 @using BlazorBeerCss.Helpers;
 <label class="checkbox @DisplayAsIcon()">
-    <input type="checkbox" disabled="@Disabled" checked="@isChecked" @oninput="CheckboxChanged">
+    <input type="checkbox" disabled="@Disabled" checked="@IsChecked" @onchange="CheckboxChanged">
     <span>
         @if (Icons != null)
         {
@@ -25,8 +25,77 @@
     [Parameter]
     public bool IsChecked { get; set; } = false;
 
+
+    [Parameter] public EventCallback<bool> IsCheckedChanged { get; set; }
+
+    //[Parameter]
+    //public bool IsChecked
+    //{
+    //    get { return isChecked; }
+    //    set
+    //    {
+    //        if (isChecked != value)
+    //        {
+    //            isChecked = value;
+    //            IsCheckedChanged.InvokeAsync(isChecked);
+    //        }
+    //    }
+    //}
+
     private bool isChecked;
 
+    protected override void OnParametersSet()
+    {
+        IsChecked = !IsChecked;
+        IsCheckedChanged.InvokeAsync(IsChecked);
+        //isChecked = this.IsChecked;
+    }
+
+    private void CheckboxChanged(ChangeEventArgs e)
+    {
+        var value = e.Value;
+    }
+
+    private string DisplayAsIcon()
+    {
+        @if (Icons != null)
+            return "icon";
+
+        return "";
+    }
+}
+*@
+
+@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+<label class="checkbox @DisplayAsIcon()">
+    <input type="checkbox" disabled="@Disabled" checked="@IsChecked" @onchange="CheckboxChanged">
+    <span>
+        @if (Icons != null)
+        {
+            <i>@Icons?.Item1</i>
+            <i>@Icons?.Item2</i>
+        }
+        else
+        {
+            @ChildContent
+        }
+    </span>
+</label>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool Disabled { get; set; }
+    [Parameter] public Tuple<Icon, Icon>? Icons { get; set; } = null;
+    [Parameter]
+    public bool IsChecked { get; set; } = true;
+
+    // Internal field holding checkbox state
+    private bool isChecked;
+
+    [Parameter] public EventCallback<bool> IsCheckedChanged { get; set; }
+    // updates the internal value whwenever the component is updated
+    // You may not want that??
     protected override void OnParametersSet()
     {
         isChecked = this.IsChecked;
@@ -35,6 +104,13 @@
     private void CheckboxChanged(ChangeEventArgs e)
     {
         var value = e.Value;
+        if (e.Value != null)
+        {
+            var result = (bool)e.Value;
+            IsCheckedChanged.InvokeAsync((bool)e.Value);
+            Console.WriteLine($"Checkbox changed {value}");
+        }
+
     }
 
     private string DisplayAsIcon()

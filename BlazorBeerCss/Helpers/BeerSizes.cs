@@ -21,7 +21,9 @@ public enum BeerSizes
     [Description("no-wrap")]
     NoWrap,
     [Description("max")]
-    Max,
+    Max,    
+    [Description("min")]
+    Minimum,
     [Description("small-width")]
     SmallWidth,
     [Description("medium-width")]

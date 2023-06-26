@@ -1,0 +1,64 @@
+﻿@using BlazorBeerCss.Helpers;
+@using BlazorBeerCss.Extensions;
+
+<CascadingValue Value="this">
+    <div class="tabs @SetSize() @Alignment.GetEnumDescription()">
+    @foreach (BeerTab tabPage in Pages)
+    {
+            <a class="@GetActiveClass(tabPage) @Direction.GetEnumDescription()" @onclick=@( () => ActivatePage(tabPage) )>
+                @if (tabPage.IsIconOrImage())
+                {
+                    @if (tabPage.IsIcon())
+                    {
+                        <BeerIcon Icon="tabPage.Icon"></BeerIcon>
+                    }else
+                    {
+                        <BeerImage Src="@tabPage.Image" Form="BeerForms.Circle"></BeerImage>
+                    }
+                    <span>@tabPage.Text</span>
+                } 
+                else
+                {
+                    @tabPage.Text
+                }
+             </a>
+    }
+    </div>
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool MaxSize { get; set; } = true;
+    [Parameter] public BeerAlignments Alignment { get; set; } = BeerAlignments.Default;
+    [Parameter] public BeerDirections Direction { get; set; } = BeerDirections.Default;
+
+    public BeerTab? ActivePage { get; set; }
+    List<BeerTab> Pages = new List<BeerTab>();
+
+    internal void AddPage(BeerTab tabPage)
+    {
+        Pages.Add(tabPage);
+        if (Pages.Count == 1)
+            ActivePage = tabPage;
+        StateHasChanged();
+    }
+
+    string GetActiveClass(BeerTab page)
+    {
+        return page == ActivePage ? "active" : "";
+    }
+
+    void ActivatePage(BeerTab page)
+    {
+        ActivePage = page;
+    }
+
+    string SetSize()
+    {
+        if (MaxSize)
+            return BeerSizes.Default.GetEnumDescription();
+
+        return BeerSizes.Minimum.GetEnumDescription();
+    }
+}
