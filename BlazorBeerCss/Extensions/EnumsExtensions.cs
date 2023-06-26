@@ -19,6 +19,10 @@ public static class EnumsExtensions
     public static string GetEnumDescription(this Enum enumValue)
     {
         var field = enumValue.GetType().GetField(enumValue.ToString());
+
+        if(field == null)
+            throw new ArgumentNullException("Item was null.", nameof(enumValue));
+
         if (Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) is DescriptionAttribute attribute)
         {
             return attribute.Description;

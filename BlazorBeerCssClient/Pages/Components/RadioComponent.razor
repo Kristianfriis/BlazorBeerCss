@@ -1,0 +1,31 @@
+﻿<BeerH5>Radios</BeerH5>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+
+<BeerH6>Default</BeerH6>
+<BeerRow>
+    <BeerRadioGroup Name="RadioTest" TItem="string">
+        <BeerRadio Title="Test" TItem="string" Value="@("test")"></BeerRadio>
+        <BeerRadio Title="Test2" TItem="string" Value="@("test1")"></BeerRadio>
+    </BeerRadioGroup>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerH6>Radio with icons</BeerH6>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+
+<BeerH6>Radio in field elements</BeerH6>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+
+<input type="radio" checked="@(valueTest == "1")"
+       name="Gender" @onchange="@(() => valueTest = "1")" />
+<label>1</label>
+
+<input type="radio" checked="@(valueTest == "2")"
+       name="Gender" @onchange="@(() => valueTest = "2")" />
+<label>1</label>
+
+<input type="radio" checked="@(valueTest == "3")"
+       name="Gender" @onchange="@(() => valueTest = "3")" />
+<label>1</label>
+@code {
+    string valueTest = "1";
+}

@@ -1,0 +1,36 @@
+﻿@typeparam TItem
+<CascadingValue Value="this">
+    @foreach (BeerRadio<TItem> radio in Radios)
+    {
+    
+    }
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string? Name { get; set; }
+    List<BeerRadio<TItem>> Radios = new List<BeerRadio<TItem>>();
+    internal BeerRadio<TItem> SelectedRadio;
+
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrEmpty(Name))
+            throw new ArgumentNullException(nameof(BeerRadioGroup<TItem>), "BeerRadioGroup must have a Name set in parameters");
+    }
+
+    internal void AddRadio(BeerRadio<TItem> radio)
+    {
+        Radios.Add(radio);
+        StateHasChanged();
+    }
+
+    internal void SetSelectedRadio(BeerRadio<TItem> radio)
+    {
+        SelectedRadio = radio;
+
+        Console.WriteLine("parent value: " + SelectedRadio.Value);
+
+        StateHasChanged();
+    }
+}
