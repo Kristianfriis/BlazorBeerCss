@@ -1,0 +1,47 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+<label class="checkbox @DisplayAsIcon()">
+    <input type="checkbox" disabled="@Disabled" checked="@isChecked" @oninput="CheckboxChanged">
+    <span>
+        @if (Icons != null)
+        {
+            <i>@Icons?.Item1</i>
+            <i>@Icons?.Item2</i>
+        } 
+        else
+        {
+            @ChildContent
+        }
+    </span>
+</label>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool Disabled { get; set; }
+    [Parameter] public Tuple<Icon, Icon>? Icons { get; set; } = null;
+    //[Parameter] public Icon? FirstIcon { get; set; } = null;
+    //[Parameter] public Icon? SecondIcon { get; set; } = null;
+
+    [Parameter]
+    public bool IsChecked { get; set; } = false;
+
+    private bool isChecked;
+
+    protected override void OnParametersSet()
+    {
+        isChecked = this.IsChecked;
+    }
+
+    private void CheckboxChanged(ChangeEventArgs e)
+    {
+        var value = e.Value;
+    }
+
+    private string DisplayAsIcon()
+    {
+        @if (Icons != null)
+            return "icon";
+
+        return "";
+    }
+}

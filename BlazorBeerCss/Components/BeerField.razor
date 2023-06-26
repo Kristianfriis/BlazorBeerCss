@@ -5,11 +5,11 @@
     @ChildContent
     @if (!string.IsNullOrEmpty(HelperText))
     {
-        <span class="helper">Helper text</span>
+        <span class="helper">@HelperText</span>
     }
     @if (!string.IsNullOrEmpty(ErrorText))
     {
-      <span class="error">Error text</span>
+        <span class="error">@ErrorText</span>
     }
 </div>
 

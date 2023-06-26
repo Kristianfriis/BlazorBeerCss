@@ -1,0 +1,46 @@
+﻿<BeerH5>Checkboxes</BeerH5>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerH6>Default checkbox</BeerH6>
+<BeerRow>
+    <BeerCheckbox></BeerCheckbox>
+    <BeerCheckbox IsChecked="true">Enabled</BeerCheckbox>
+    <BeerCheckbox IsChecked="false" Disabled="true">Disabled</BeerCheckbox>
+</BeerRow>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerH6>Checkbox with icons</BeerH6>
+<BeerRow>
+    <BeerCheckbox Icons="@new(BeerIcons.Iconclose, BeerIcons.Icondone)"></BeerCheckbox>
+</BeerRow>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerH6>Checkbox in field elements</BeerH6>
+<BeerRow>
+    <BeerField>
+        <BeerNav>
+            <BeerCheckbox>Item 1</BeerCheckbox>
+            <BeerCheckbox>Item 2</BeerCheckbox>
+            <BeerCheckbox>Item 3</BeerCheckbox>
+        </BeerNav>
+    </BeerField>
+    <BeerField HelperText="Helper Text">
+        <BeerNav>
+            <BeerCheckbox>Item 1</BeerCheckbox>
+            <BeerCheckbox>Item 2</BeerCheckbox>
+            <BeerCheckbox>Item 3</BeerCheckbox>
+        </BeerNav>
+    </BeerField>
+
+    <BeerField ErrorText="Error Text Disabled">
+        <BeerNav>
+            <BeerCheckbox>Item 1</BeerCheckbox>
+            <BeerCheckbox>Item 2</BeerCheckbox>
+            <BeerCheckbox>Item 3</BeerCheckbox>
+        </BeerNav>
+    </BeerField>
+</BeerRow>
+
+@code {
+
+}
