@@ -73,7 +73,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-6\/4fnMuGtR\/N0GQumfSVwFrAIr4EOZoo7z3PCIqzybo=",
+      "hash": "sha256-o772GfR1b7Ous73OqZTN19BGOC5sz1Y8ZGxkZAqhRYE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -81,7 +81,7 @@
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-AdFRrVj0i5DaVsvL43YVDBn0n7YMqjWlN63Gi3NZir0=",
+      "hash": "sha256-exe+Gi3poXeDPAjzhkn9t4IaIrqCFgUVVjum7TQRMtg=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
@@ -213,15 +213,15 @@
       "url": "BlazorBeerCssClient.styles.css"
     },
     {
-      "hash": "sha256-jT0EfCvHs9nOK+TRFDhsQYC8DEwmOMk1xNYKev900q4=",
+      "hash": "sha256-tJFMUZZP1auVNSwS9cCSRQ\/dT6zgOcfzVTYBWECw958=",
       "url": "_content\/BlazorBeerCss\/css\/beercss\/beer.min.css"
     },
     {
-      "hash": "sha256-JnH7ZQeMei\/eaAUj1UezYj10gWDe\/+A8rwkCeatl7hY=",
+      "hash": "sha256-uozamcQe0xp56L+2V0iNaFEL1u3ee1G8uZRgIWdt1E4=",
       "url": "_content\/BlazorBeerCss\/css\/beercss\/beer.min.js"
     },
     {
-      "hash": "sha256-gWztIMYjeNunOIe\/Lajj9I3A4o1u14WrxNNPrs5IV1E=",
+      "hash": "sha256-K+ZztQpvCTJJRvbKRrV7w6uJQ5+6qhRGORE011Jrqh8=",
       "url": "_content\/BlazorBeerCss\/css\/beercss\/material-dynamic-colors.min.js"
     },
     {
@@ -233,5 +233,5 @@
       "url": "_content\/BlazorBeerCss\/js\/interop.js"
     }
   ],
-  "version": "rBkpz\/yI"
+  "version": "o20GVIpZ"
 };
