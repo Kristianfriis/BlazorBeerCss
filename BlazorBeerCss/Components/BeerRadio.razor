@@ -1,36 +1,68 @@
-﻿@typeparam TItem
-@using Microsoft.AspNetCore.Components.Forms;
-<label class="radio">
-    <input disabled="@Disabled" name="@Parent!.Name" @onchange="@(() => Parent!.SetSelectedRadio(this))" value="@Value" checked="@(Parent!.SelectedRadio == this)" />
-    <span>@Title</span>
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+@typeparam T where T : class
+<label class="radio @DisplayAsIcon()">
+    <input type="radio" checked="@SetChecked()"
+           name="@Parent!.Name" @onchange="@(() => Parent!.SetSelectedRadio(this))" disabled="@Disabled" />
+    <span>
+    @if (!string.IsNullOrEmpty(DisplayAsIcon()))
+    {
+        if(Icons != null)
+        {
+            <i>@Icons?.Item1</i>
+            <i>@Icons?.Item2</i>
+        }
+        if (ImageSources != null)
+        {
+            <i>
+                <img src="@ImageSources?.Item1">
+            </i>
+            <i>
+                <img src="@ImageSources?.Item2">
+            </i>
+        }
+    }
+    else
+    {
+            @ChildContent
+    }
+    </span>
 </label>
-
 @code {
-    [CascadingParameter] private BeerRadioGroup<TItem>? Parent { get; set; }
-    [Parameter] public string? Title { get; set; }
-    [Parameter] public bool Disabled { get; set; } = false;
-    [Parameter] public TItem Value { get; set; }
+    [CascadingParameter] private BeerRadioGroup<T>? Parent { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public T? Value { get; set; }
+    [Parameter] public bool Disabled { get; set; }
+    [Parameter] public Tuple<Icon, Icon>? Icons { get; set; } = null;
+    [Parameter] public Tuple<string, string>? ImageSources { get; set; } = null;
 
     protected override void OnInitialized()
     {
-        if (Parent == null)
+        if (Parent is null)
             throw new ArgumentNullException(nameof(Parent), "BeerRadio must exist within a BeerRadioGroup");
+            
+        if (Value is null)
+            throw new ArgumentNullException(nameof(BeerRadioGroup<T>), "A Value is required when using a BeerRadio");
+
+        if (Icons is not null && ImageSources is not null)
+            throw new ArgumentNullException(nameof(BeerRadioGroup<T>), "A Value is required when using a BeerRadio");
 
         base.OnInitialized();
 
-        Parent.AddRadio(this);
+        Parent!.AddRadio(this);
+        SetChecked();
     }
 
-    bool GetActive()
+    bool SetChecked()
     {
-        if (Parent!.SelectedRadio == this)
-            return true;
-        return false;
+        return Parent!.SelectedRadio == this;
     }
 
-    void OnClick()
+    private string DisplayAsIcon()
     {
-        Console.WriteLine(Value);
-        Parent!.SetSelectedRadio(this);
+        @if (Icons is not null || ImageSources is not null)
+            return "icon";
+
+        return "";
     }
 }

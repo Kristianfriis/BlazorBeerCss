@@ -1,35 +1,50 @@
-﻿@typeparam TItem
+﻿@typeparam T where T : class
 <CascadingValue Value="this">
-    @foreach (BeerRadio<TItem> radio in Radios)
-    {
-    
-    }
     @ChildContent
 </CascadingValue>
-
 @code {
     [Parameter] public RenderFragment? ChildContent { get; set; }
     [Parameter] public string? Name { get; set; }
-    List<BeerRadio<TItem>> Radios = new List<BeerRadio<TItem>>();
-    internal BeerRadio<TItem> SelectedRadio;
+    [Parameter] public EventCallback<T> ValueChanged { get; set; }
+    [Parameter] public T? Value { get; set; }
 
     protected override void OnInitialized()
     {
-        if (string.IsNullOrEmpty(Name))
-            throw new ArgumentNullException(nameof(BeerRadioGroup<TItem>), "BeerRadioGroup must have a Name set in parameters");
+        base.OnInitialized();
     }
 
-    internal void AddRadio(BeerRadio<TItem> radio)
+    // Internal field holding checkbox state
+    //private T? value;
+
+    internal List<BeerRadio<T>> Radios = new List<BeerRadio<T>>();
+
+    internal BeerRadio<T>? SelectedRadio;
+
+    internal void AddRadio(BeerRadio<T> radio)
     {
         Radios.Add(radio);
+        if(Value == null)
+        {
+            if (Radios.Count == 1)
+                SetSelectedRadio(radio);
+        } else
+        {
+            var chosenRadio = Radios.Find(x => x.Value == Value);
+            if (chosenRadio != null)
+                SetSelectedRadio(radio);
+        }
+
         StateHasChanged();
     }
 
-    internal void SetSelectedRadio(BeerRadio<TItem> radio)
+    internal void SetSelectedRadio(BeerRadio<T> radio)
     {
         SelectedRadio = radio;
 
-        Console.WriteLine("parent value: " + SelectedRadio.Value);
+        if (radio.Value != null)
+        {
+            ValueChanged.InvokeAsync(SelectedRadio.Value);
+        }
 
         StateHasChanged();
     }
