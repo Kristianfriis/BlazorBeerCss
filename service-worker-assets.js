@@ -73,15 +73,15 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-o772GfR1b7Ous73OqZTN19BGOC5sz1Y8ZGxkZAqhRYE=",
+      "hash": "sha256-VbDvlXcGZGW8QUjH2M3ET\/JmUOKIsigNemqsNAhOXcQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-\/D9Dsf4RHOyYtOBqEIN+qiruKIArb3\/9I84KoA6vOIQ=",
+      "hash": "sha256-kixcig9\/g\/yj2zs8YRX0po\/CiPAGvI3fe\/QdUgQ6QMA=",
       "url": "_framework\/BlazorBeerCss.dll"
     },
     {
-      "hash": "sha256-exe+Gi3poXeDPAjzhkn9t4IaIrqCFgUVVjum7TQRMtg=",
+      "hash": "sha256-qYHcJOPAH0Yuj0Ejb\/tHsH0sn3tnLJUu17l0HN3EgQA=",
       "url": "_framework\/BlazorBeerCssClient.dll"
     },
     {
@@ -177,7 +177,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-pf\/gben8r7oiGbkzzTdXldpGh3fr5comfiGjrYEmPSs=",
+      "hash": "sha256-7iOts0Q525\/wcS0Jbgcs1odek3KvlM5WJ5H\/SW03n+w=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-OjiuihDX\/JvFSN8EXYlzvG0pxYkLMgQ9pkL5GKFyUiA=",
+      "hash": "sha256-FL4wbShOShZB+tlDjRN+C0jcSuKpts2rpUOZPX1d+A0=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -233,5 +233,5 @@
       "url": "_content\/BlazorBeerCss\/js\/interop.js"
     }
   ],
-  "version": "o20GVIpZ"
+  "version": "YzGWplKL"
 };
