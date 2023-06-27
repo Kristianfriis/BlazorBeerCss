@@ -38,3 +38,5 @@ using BlazorBeerCss.BeerToast;
 ```c#
 builder.Services.AddSingleton<BeerToastService>();
 ```
+### Optional
+Remove unused css in wwwwroot/css and remove the scaffolded css from MainLayout.razor.css and NavMenu.razor.css 
