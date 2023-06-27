@@ -4,10 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-	<PackageVersion>0.0.1-beta</PackageVersion>
+	<PackageVersion>0.0.3-beta</PackageVersion>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>BlazorBeerCSS</Title>
 	<PackageProjectUrl>https://kristianfriis.github.io/BlazorBeerCss/</PackageProjectUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
 
@@ -18,6 +20,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.16" />
 	<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.16" />
+	<None Include="..\README.md" Pack="true" PackagePath="\"/>
+	  <None Include="..\LICENSE.txt" Pack="true" PackagePath=""/>
   </ItemGroup>
 
 </Project>
