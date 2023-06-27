@@ -4,12 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-	<PackageVersion>0.0.3-beta</PackageVersion>
+	<PackageVersion>0.0.4-beta</PackageVersion>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>BlazorBeerCSS</Title>
 	<PackageProjectUrl>https://kristianfriis.github.io/BlazorBeerCss/</PackageProjectUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
-	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<RepositoryUrl>https://github.com/Kristianfriis/BlazorBeerCss</RepositoryUrl>
   </PropertyGroup>
 
 
