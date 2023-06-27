@@ -1,0 +1,22 @@
+﻿@using BlazorBeerCss.Extensions;
+@using BlazorBeerCss.Helpers;
+<a class="button @Theme.GetEnumDescription() @Form.GetEnumDescription()" href="@Href" target="@Target">
+    <i>
+        @if(Icon is not null)
+        {
+            @Icon.ToString()
+        }
+        @if (Image is not null)
+        {
+            <img src="@Image" />
+        }
+   </i>
+</a>
+@code {
+    [Parameter] public string Href { get; set; } = string.Empty;
+    [Parameter] public string Target { get; set; } = "_self";
+    [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
+    [Parameter] public BeerThemes Theme { get; set; } = BeerThemes.Default;
+    [Parameter] public Icon? Icon { get; set; } = null;
+    [Parameter] public string? Image { get; set; } = null;
+}

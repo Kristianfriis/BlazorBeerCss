@@ -1,0 +1,14 @@
+﻿<BeerH5>Buttons</BeerH5>
+<BeerButton OnClick="test" Size="BeerSizes.Extra">Extra</BeerButton>
+<BeerButton OnClick="test" Size="BeerSizes.Large">Large</BeerButton>
+<BeerButton OnClick="test" Size="BeerSizes.Medium">Medium</BeerButton>
+<BeerButton OnClick="test" Size="BeerSizes.Small">Small</BeerButton>
+
+
+@code {
+    bool active = false;
+    void test()
+    {
+        active = !active;
+    }
+}
