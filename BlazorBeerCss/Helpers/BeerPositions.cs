@@ -2,7 +2,7 @@
 
 namespace BlazorBeerCss.Helpers;
 
-public enum BeerPostions
+public enum BeerPositions
 {
     [Description("")]
     Default,
