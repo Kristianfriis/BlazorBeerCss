@@ -14,8 +14,8 @@
 <BeerH6>Radio with icons</BeerH6>
 <BeerRow>
     <BeerRadioGroup Name="RadioTestIcon" T="string" @bind-Value="defaultChoiceIcon">
-        <BeerRadio Value="@("withIcon")" Icons="new(BeerIcons.Icondone, BeerIcons.Iconclose)"></BeerRadio>
-        <BeerRadio Value="@("withIcon1")" ImageSources="@new("favicon.png", "beer-and-woman.jpg")"></BeerRadio>
+        <BeerRadio T="string" Value="@("withIcon")" Icons="new(BeerIcons.Icondone, BeerIcons.Iconclose)"></BeerRadio>
+        <BeerRadio T="string" Value="@("withIcon1")" ImageSources="@new("favicon.png", "beer-and-woman.jpg")"></BeerRadio>
     </BeerRadioGroup>
 </BeerRow>
 <BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
@@ -25,27 +25,27 @@
     <BeerField Alignement="BeerAlignments.MiddleAlign">
         <BeerNav>
             <BeerRadioGroup Name="RadioTestField1" T="string">
-                <BeerRadio Value="@("RadioTestField11")">Item 1</BeerRadio>
-                <BeerRadio Value="@("RadioTestField12")">Item 2</BeerRadio>
-                <BeerRadio Value="@("RadioTestField13")">Item 3</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField11")">Item 1</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField12")">Item 2</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField13")">Item 3</BeerRadio>
             </BeerRadioGroup>
         </BeerNav>
     </BeerField>
     <BeerField Alignement="BeerAlignments.MiddleAlign" HelperText="Helper Text">
         <BeerNav>
             <BeerRadioGroup Name="RadioTestField2" T="string">
-                <BeerRadio Value="@("RadioTestField21")">Item 1</BeerRadio>
-                <BeerRadio Value="@("RadioTestField22")">Item 2</BeerRadio>
-                <BeerRadio Value="@("RadioTestField23")">Item 3</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField21")">Item 1</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField22")">Item 2</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField23")">Item 3</BeerRadio>
             </BeerRadioGroup>
         </BeerNav>
     </BeerField>
     <BeerField Alignement="BeerAlignments.MiddleAlign" ErrorText="Error Text Disabled">
         <BeerNav>
             <BeerRadioGroup Name="RadioTestField3" T="string">
-                <BeerRadio Value="@("RadioTestField31")">Item 1</BeerRadio>
-                <BeerRadio Value="@("RadioTestField32")">Item 2</BeerRadio>
-                <BeerRadio Value="@("RadioTestField33")">Item 3</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField31")">Item 1</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField32")">Item 2</BeerRadio>
+                <BeerRadio T="string" Value="@("RadioTestField33")">Item 3</BeerRadio>
             </BeerRadioGroup>
         </BeerNav>
     </BeerField>
