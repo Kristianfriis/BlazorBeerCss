@@ -13,7 +13,7 @@ public class BeerToastService
         NotifyStateChanged();
     }
 
-    public event Action OnChange;
+    public event Action? OnChange;
     private void NotifyStateChanged() => OnChange?.Invoke();
 }
 

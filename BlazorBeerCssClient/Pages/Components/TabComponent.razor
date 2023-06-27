@@ -45,8 +45,6 @@
     </BeerTab>
 </BeerTabs>
 
-<BeerButton OnClick="test">Test</BeerButton>
-
 @code {
     private bool Vertical { get; set; } = true;
     private bool Minimum  {get; set;}  = true;
@@ -57,11 +55,5 @@
             return BeerDirections.Default;
         else
             return BeerDirections.Vertical;
-    }
-
-    void test()
-    {
-        Console.WriteLine("Size: " + Minimum);
-        Console.WriteLine("Direction: " + Vertical);
     }
 }

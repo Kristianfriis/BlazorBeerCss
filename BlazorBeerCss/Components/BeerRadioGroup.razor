@@ -1,0 +1,51 @@
+﻿@typeparam T where T : class
+<CascadingValue Value="this">
+    @ChildContent
+</CascadingValue>
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string? Name { get; set; }
+    [Parameter] public EventCallback<T> ValueChanged { get; set; }
+    [Parameter] public T? Value { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    // Internal field holding checkbox state
+    //private T? value;
+
+    internal List<BeerRadio<T>> Radios = new List<BeerRadio<T>>();
+
+    internal BeerRadio<T>? SelectedRadio;
+
+    internal void AddRadio(BeerRadio<T> radio)
+    {
+        Radios.Add(radio);
+        if(Value == null)
+        {
+            if (Radios.Count == 1)
+                SetSelectedRadio(radio);
+        } else
+        {
+            var chosenRadio = Radios.Find(x => x.Value == Value);
+            if (chosenRadio != null)
+                SetSelectedRadio(radio);
+        }
+
+        StateHasChanged();
+    }
+
+    internal void SetSelectedRadio(BeerRadio<T> radio)
+    {
+        SelectedRadio = radio;
+
+        if (radio.Value != null)
+        {
+            ValueChanged.InvokeAsync(SelectedRadio.Value);
+        }
+
+        StateHasChanged();
+    }
+}
