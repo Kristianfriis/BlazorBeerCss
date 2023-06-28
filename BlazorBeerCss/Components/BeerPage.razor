@@ -1,4 +1,8 @@
-﻿<div class="page @(Active ? "active" : "")">
+﻿@namespace BlazorBeerCss
+@using Extensions;
+@using Helpers;
+
+<div class="page @(Active ? "active" : "")">
     @ChildContent
 </div>
 

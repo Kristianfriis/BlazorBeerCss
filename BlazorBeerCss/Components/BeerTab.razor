@@ -1,5 +1,6 @@
-﻿@using BlazorBeerCss.Extensions;
-@using BlazorBeerCss.Helpers;
+﻿@namespace BlazorBeerCss
+@using Extensions;
+@using Helpers;
 @if (Parent!.ActivePage == this)
 {
     <div class="page @Padding.GetEnumDescription() @GetActive() @Position.GetEnumDescription()">

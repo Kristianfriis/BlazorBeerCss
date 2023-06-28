@@ -1,5 +1,6 @@
-﻿@using BlazorBeerCss.Extensions;
-@using BlazorBeerCss.Helpers;
+﻿@namespace BlazorBeerCss
+@using Extensions;
+@using Helpers;
 <label class="checkbox @DisplayAsIcon()">
     <input type="checkbox" disabled="@Disabled" checked="@IsChecked" @onchange="CheckboxChanged">
     <span>

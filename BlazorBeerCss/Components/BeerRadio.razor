@@ -1,5 +1,6 @@
-﻿@using BlazorBeerCss.Extensions;
-@using BlazorBeerCss.Helpers;
+﻿@namespace BlazorBeerCss
+@using Extensions;
+@using Helpers;
 @typeparam T where T : class
 <label class="radio @DisplayAsIcon()">
     <input type="radio" checked="@SetChecked()"

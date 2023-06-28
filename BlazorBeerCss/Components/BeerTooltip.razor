@@ -1,8 +1,10 @@
-﻿@using BlazorBeerCss.Helpers;
-@using BlazorBeerCss.Extensions;
-<div class="tooltip @Postion.GetEnumDescription() @Size.GetEnumDescription() @Space.GetEnumDescription()">
-    @ChildContent
-</div>
+﻿@namespace BlazorBeerCss
+@using Extensions;
+@using Helpers;
+@using System;
+@using System.Text;
+
+<div class="@GetClass()">@ChildContent</div>
 
 @code {
     [Parameter] public BeerSpaces Space { get; set; } = BeerSpaces.Default;
@@ -10,4 +12,9 @@
     [Parameter] public BeerPositions Postion { get; set; } = BeerPositions.Default;
 
     [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    string GetClass()
+    {
+        return ClassHelpers.CreateClass("tooltip", Postion, Size, Space);
+    }
 }
