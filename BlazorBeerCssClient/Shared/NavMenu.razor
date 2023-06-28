@@ -11,10 +11,10 @@
         <BeerIcon Icon="BeerIcons.Iconlist"></BeerIcon>
         <BeerSpan>Fetch Data</BeerSpan>
     </BeerLink>
-    <BeerButton OnClick="@(() => SetNavPosition(BeerPostions.Top))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+    <BeerButton OnClick="@(() => SetNavPosition(BeerPositions.Top))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
         <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowUpward"></BeerIcon>
     </BeerButton>
-    <BeerButton OnClick="@(() => SetNavPosition(BeerPostions.Bottom))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+    <BeerButton OnClick="@(() => SetNavPosition(BeerPositions.Bottom))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
         <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowDownward"></BeerIcon>
     </BeerButton>
     <BeerButton OnClick="SetDarkmode" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
@@ -36,10 +36,10 @@
         <BeerIcon Icon="BeerIcons.Iconlist"></BeerIcon>
         <BeerSpan>Fetch Data</BeerSpan>
     </BeerLink>
-    <BeerButton OnClick="@(() => SetNavSide(BeerPostions.Right))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+    <BeerButton OnClick="@(() => SetNavSide(BeerPositions.Right))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
         <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowForward"></BeerIcon>
     </BeerButton>
-    <BeerButton OnClick="@(() => SetNavSide(BeerPostions.Left))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
+    <BeerButton OnClick="@(() => SetNavSide(BeerPositions.Left))" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
         <BeerIcon Form="BeerForms.Round" Icon="BeerIcons.IconarrowBack"></BeerIcon>
     </BeerButton>
     <BeerButton OnClick="SetDarkmode" Theme="BeerThemes.Transparent" Form="BeerForms.Circle">
@@ -51,10 +51,10 @@
     [Inject] public BeerThemeChanger? beerThemeChanger { get; set; }
     bool isDarkMode = false;
 
-    BeerPostions BeerPostion = BeerPostions.Left;
-    BeerPostions NavBeerPostion = BeerPostions.Bottom;
+    BeerPositions BeerPostion = BeerPositions.Left;
+    BeerPositions NavBeerPostion = BeerPositions.Bottom;
 
-    void SetNavSide(BeerPostions beerPostion)
+    void SetNavSide(BeerPositions beerPostion)
     {
         if (beerPostion == BeerPostion)
             return;
@@ -62,7 +62,7 @@
         BeerPostion = beerPostion;
     }
 
-    void SetNavPosition(BeerPostions beerPostion)
+    void SetNavPosition(BeerPositions beerPostion)
     {
         if (beerPostion == NavBeerPostion)
             return;

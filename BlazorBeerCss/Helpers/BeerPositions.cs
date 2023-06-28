@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace BlazorBeerCss.Helpers;
+namespace BlazorBeerCss;
 
-public enum BeerPostions
+public enum BeerPositions
 {
     [Description("")]
     Default,

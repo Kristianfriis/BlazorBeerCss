@@ -1,5 +1,4 @@
-﻿@using BlazorBeerCss.Helpers;
-@using BlazorBeerCss.Extensions;
+﻿@namespace BlazorBeerCss
 
 <nav class="@Position.GetEnumDescription() @Responsive.GetEnumDescription()">
     @ChildContent
@@ -7,6 +6,6 @@
 
 @code {
     [Parameter] public RenderFragment? ChildContent { get; set; }
-    [Parameter] public BeerPostions Position { get; set; } = BeerPostions.Default;
+    [Parameter] public BeerPositions Position { get; set; } = BeerPositions.Default;
     [Parameter] public BeerResponsive Responsive { get; set; } = BeerResponsive.Default;
 }

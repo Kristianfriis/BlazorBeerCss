@@ -1,6 +1,5 @@
-﻿@using BlazorBeerCss.Extensions;
-@using BlazorBeerCss.Helpers;
-<button @onclick="InvokeParentMethod" class="@Size.GetEnumDescription() @Color.GetEnumDescription() @Theme.GetEnumDescription() @Form.GetEnumDescription()">
+﻿@namespace BlazorBeerCss
+<button @onclick="InvokeParentMethod" class="@ChipCutton() @Size.GetEnumDescription() @Color.GetEnumDescription() @Theme.GetEnumDescription() @Form.GetEnumDescription()">
     @ChildContent
 </button>
 
@@ -11,6 +10,7 @@
     [Parameter] public BeerThemes Theme { get; set; } = BeerThemes.Default;
     [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
     [Parameter] public BeerDirections Direction { get; set; } = BeerDirections.Default;
+    [Parameter] public bool ChipButton { get; set; } = false;
 
     [Parameter] public RenderFragment? ChildContent { get; set; }
 
@@ -21,5 +21,10 @@
         if (!OnClick.HasDelegate)
             return;
         await OnClick.InvokeAsync();
+    }
+
+    string ChipCutton()
+    {
+        return ChipButton ? "chip" : "" ;
     }
 }

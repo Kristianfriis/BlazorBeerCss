@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
+using System.Reflection;
 
-namespace BlazorBeerCss.Extensions;
+namespace BlazorBeerCss;
 
 public static class EnumsExtensions
 {
@@ -28,5 +29,20 @@ public static class EnumsExtensions
             return attribute.Description;
         }
         throw new ArgumentException("Item not found.", nameof(enumValue));
+    }
+
+    public static T GetEnumValueFromDescription<T>(string description)
+    {
+        MemberInfo[] fis = typeof(T).GetFields();
+
+        foreach (var fi in fis)
+        {
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
+
+            if (attributes != null && attributes.Length > 0 && attributes[0].Description == description)
+                return (T)Enum.Parse(typeof(T), fi.Name);
+        }
+
+        throw new Exception("Not found");
     }
 }

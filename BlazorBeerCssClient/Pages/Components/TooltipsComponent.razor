@@ -1,0 +1,53 @@
+﻿<BeerH4>Tooltips</BeerH4>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerRow>
+    <BeerRadioGroup Name="spacing" T="string" @bind-Value="@spaceString">
+        <BeerRadio T="string" Value="BeerSpaces.NoSpace.GetEnumDescription()">@BeerSpaces.NoSpace.GetEnumDescription()</BeerRadio>
+        <BeerRadio T="string" Value="BeerSpaces.Default.GetEnumDescription()">@BeerSpaces.SmallSpace.GetEnumDescription()</BeerRadio>
+        <BeerRadio T="string" Value="BeerSpaces.MediumSpace.GetEnumDescription()">@BeerSpaces.MediumSpace.GetEnumDescription()</BeerRadio>
+        <BeerRadio T="string" Value="BeerSpaces.LargeSpace.GetEnumDescription()">@BeerSpaces.LargeSpace.GetEnumDescription()</BeerRadio>
+    </BeerRadioGroup>
+</BeerRow>
+<BeerRow>
+    <BeerButton ChipButton="true" Form="BeerForms.Round">
+        <BeerSpan>Plain tooltip</BeerSpan>
+        <BeerTooltip Space="@Convert()">Tooltip</BeerTooltip>
+    </BeerButton>    
+    <BeerButton ChipButton="true" Form="BeerForms.Round">
+        <BeerSpan>Plain tooltip</BeerSpan>
+        <BeerTooltip Space="@Convert()" Size="BeerSizes.Max">
+            <b>Title</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <nav>
+                <a class="inverse-link">Action</a>
+            </nav>
+        </BeerTooltip>
+    </BeerButton>
+    <BeerButton ChipButton="true" Form="BeerForms.Circle">
+        <BeerIcon Icon="BeerIcons.IconarrowBack"></BeerIcon>
+        <BeerTooltip Space="@Convert()" Postion="BeerPositions.Left">Tooltip</BeerTooltip>
+    </BeerButton>
+    <BeerButton ChipButton="true" Form="BeerForms.Circle">
+        <BeerIcon Icon="BeerIcons.IconarrowUpward"></BeerIcon>
+        <BeerTooltip Space="@Convert()" Postion="BeerPositions.Top">Tooltip</BeerTooltip>
+    </BeerButton>
+    <BeerButton ChipButton="true" Form="BeerForms.Circle">
+        <BeerIcon Icon="BeerIcons.IconarrowDownward"></BeerIcon>
+        <BeerTooltip Space="@Convert()" Postion="BeerPositions.Bottom">Tooltip</BeerTooltip>
+    </BeerButton>
+    <BeerButton ChipButton="true" Form="BeerForms.Circle">
+        <BeerIcon Icon="BeerIcons.IconarrowForward"></BeerIcon>
+        <BeerTooltip Space="@Convert()" Postion="BeerPositions.Right">Tooltip</BeerTooltip>
+    </BeerButton>
+</BeerRow>
+
+@code {
+    BeerSpaces spacing = BeerSpaces.Default;
+    string spaceString = BeerSpaces.SmallSpace.GetEnumDescription();
+
+    BeerSpaces Convert()
+    {
+        return EnumsExtensions.GetEnumValueFromDescription<BeerSpaces>(spaceString);
+    }
+}

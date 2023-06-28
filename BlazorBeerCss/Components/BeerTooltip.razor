@@ -1,11 +1,16 @@
 ﻿@namespace BlazorBeerCss
 
-<div class="row @Alignement.GetEnumDescription() @Space.GetEnumDescription() @Size.GetEnumDescription()">
-    @ChildContent
-</div>
+<div class="@GetClass()">@ChildContent</div>
+
 @code {
-    [Parameter] public BeerAlignments Alignement { get; set; } = BeerAlignments.Default;
     [Parameter] public BeerSpaces Space { get; set; } = BeerSpaces.Default;
     [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+    [Parameter] public BeerPositions Postion { get; set; } = BeerPositions.Default;
+
     [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    string GetClass()
+    {
+        return ClassHelpers.CreateClass("tooltip", Postion, Size, Space);
+    }
 }
