@@ -15,8 +15,6 @@ dotnet add package BlazorBeerCss
 ```
 Add the following to `_Imports.razor`
 ```razor
-@using BlazorBeerCss.Components
-@using BlazorBeerCss.Helpers
 @using BlazorBeerCss
 ```
 Change the article tag to below in the `MainLayout.razor` or `App.razor`

@@ -1,5 +1,4 @@
-﻿using BlazorBeerCss.Extensions;
-using System.Text;
+﻿using System.Text;
 
 namespace BlazorBeerCss;
 

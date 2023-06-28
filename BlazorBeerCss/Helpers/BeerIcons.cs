@@ -1,4 +1,4 @@
-﻿namespace BlazorBeerCss.Helpers;
+﻿namespace BlazorBeerCss;
 
 public static class BeerIcons
 {

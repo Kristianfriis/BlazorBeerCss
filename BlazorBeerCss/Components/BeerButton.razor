@@ -1,6 +1,4 @@
 ﻿@namespace BlazorBeerCss
-@using Extensions;
-@using Helpers;
 <button @onclick="InvokeParentMethod" class="@ChipCutton() @Size.GetEnumDescription() @Color.GetEnumDescription() @Theme.GetEnumDescription() @Form.GetEnumDescription()">
     @ChildContent
 </button>

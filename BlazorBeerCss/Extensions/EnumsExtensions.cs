@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Reflection;
 
-namespace BlazorBeerCss.Extensions;
+namespace BlazorBeerCss;
 
 public static class EnumsExtensions
 {

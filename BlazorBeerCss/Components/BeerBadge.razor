@@ -1,6 +1,4 @@
 ﻿@namespace BlazorBeerCss
-@using Extensions;
-@using Helpers;
 <a>
     <span class="badge @Form.GetEnumDescription() @Border.GetEnumDescription() @Color.GetEnumDescription() @GetTopOrBottom() @GetRightOrLeft()">@ChildContent</span>
     @if(Icon != null)

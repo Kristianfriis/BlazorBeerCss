@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace BlazorBeerCss.Helpers;
+namespace BlazorBeerCss;
 
 public enum BeerResponsive
 {
