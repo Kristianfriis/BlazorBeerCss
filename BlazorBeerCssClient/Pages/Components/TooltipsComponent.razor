@@ -1,7 +1,7 @@
 ﻿<BeerH4>Tooltips</BeerH4>
 
 <BeerSpace Space="BeerSpaces.Space"></BeerSpace>
-<BeerRow>
+<BeerRow Size="BeerSizes.Wrap">
     <BeerRadioGroup Name="spacing" T="string" @bind-Value="@spaceString">
         <BeerRadio T="string" Value="BeerSpaces.NoSpace.GetEnumDescription()">@BeerSpaces.NoSpace.GetEnumDescription()</BeerRadio>
         <BeerRadio T="string" Value="BeerSpaces.Default.GetEnumDescription()">@BeerSpaces.SmallSpace.GetEnumDescription()</BeerRadio>
@@ -9,7 +9,7 @@
         <BeerRadio T="string" Value="BeerSpaces.LargeSpace.GetEnumDescription()">@BeerSpaces.LargeSpace.GetEnumDescription()</BeerRadio>
     </BeerRadioGroup>
 </BeerRow>
-<BeerRow>
+<BeerRow Size="BeerSizes.Wrap">
     <BeerButton ChipButton="true" Form="BeerForms.Round">
         <BeerSpan>Plain tooltip</BeerSpan>
         <BeerTooltip Space="@Convert()">Tooltip</BeerTooltip>
