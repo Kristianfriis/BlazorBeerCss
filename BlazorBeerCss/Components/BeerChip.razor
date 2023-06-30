@@ -1,0 +1,99 @@
+﻿<a class="chip @ChipRounded @ChipBordered @ChipColor @ChipDirection @ChipSize @ChipElevation">
+    @if (!string.IsNullOrWhiteSpace(IconValue) && !IconRightAligned)
+    {
+        <i class="small">@IconValue</i>
+    }
+    @if (ChildContent != null)
+    {
+        <span>@ChildContent</span>
+    }
+    @if (!string.IsNullOrWhiteSpace(IconValue) && IconRightAligned)
+    {
+        <i class="small">@IconValue</i>
+    }
+</a>
+
+@code {
+
+    /// <summary>
+    /// The content to be displayed inside the chip.
+    /// </summary>
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    /// <summary>
+    /// The color of the chip. Uses the BeerColors enum.
+    /// </summary>
+    [Parameter]
+    public BeerColors Color { get; set; } = BeerColors.Default;
+
+    /// <summary>
+    /// The direction of the chip. Uses the BeerDirections enum.
+    /// </summary>
+    [Parameter]
+    public BeerDirections Direction { get; set; } = BeerDirections.Default;
+
+    /// <summary>
+    /// If set to true, the chip will have a border.
+    /// </summary>
+    [Parameter]
+    public bool Border { get; set; }
+
+    /// <summary>
+    /// If set to true, the chip will be round.
+    /// </summary>
+    [Parameter]
+    public bool Round { get; set; }
+
+    /// <summary>
+    /// The size of the chip. Uses the BeerSizes enum.
+    /// </summary>
+    [Parameter]
+    public BeerSizes Size { get; set; } = BeerSizes.Default;
+
+    /// <summary>
+    /// The elevation of the chip. Uses the BeerElevations enum.
+    /// </summary>
+    [Parameter]
+    public BeerElevations Elevation { get; set; } = BeerElevations.Default;
+
+    /// <summary>
+    /// The icon to be displayed on the chip.
+    /// </summary>
+    [Parameter]
+    public Icon Icon { get; set; } = new("");
+
+    /// <summary>
+    /// If set to true, the icon will be aligned to the right. Otherwise, it will be aligned to the left.
+    /// </summary>
+    [Parameter]
+    public bool IconRightAligned { get; set; }
+
+    private string ChipColor
+    {
+        get
+        {
+            var enumColor = Color.GetEnumDescription();
+            string chipColor;
+
+            if (Color == BeerColors.Primary || Color == BeerColors.Secondary || Color == BeerColors.Tertiary)
+            {
+                chipColor = $"{enumColor}{(Border ? "-border " + enumColor + "-text" : string.Empty)}";
+            }
+            else
+            {
+                chipColor = enumColor;
+            }
+
+            return chipColor;
+        }
+    }
+
+    private string ChipRounded => Round ? "round" : string.Empty;
+    private string ChipBordered => Border ? "border" : string.Empty;
+    private string IconValue => Icon.ToString();
+    private string ChipDirection => Direction.GetEnumDescription();
+    private string ChipElevation => Elevation.GetEnumDescription();
+    private string ChipSize => Size.GetEnumDescription();
+
+}
