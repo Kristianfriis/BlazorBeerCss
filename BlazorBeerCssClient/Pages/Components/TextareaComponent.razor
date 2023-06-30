@@ -1,0 +1,72 @@
+﻿<BeerH4>Textareas</BeerH4>
+
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerNav>
+        <BeerCheckbox @bind-IsChecked="@border">border</BeerCheckbox>
+        <BeerCheckbox @bind-IsChecked="@round">round</BeerCheckbox>
+        <BeerCheckbox @bind-IsChecked="@fill">fill</BeerCheckbox>
+        <BeerRadioGroup Name="textarea_sizing" T="string" @bind-Value="@sizeString">
+            <BeerRadio T="string" Value="BeerSizes.Small.GetEnumDescription()">@BeerSizes.Small.GetEnumDescription()</BeerRadio>
+            <BeerRadio T="string" Value="BeerSizes.Medium.GetEnumDescription()">@BeerSizes.Medium.GetEnumDescription()</BeerRadio>
+            <BeerRadio T="string" Value="BeerSizes.Large.GetEnumDescription()">@BeerSizes.Large.GetEnumDescription()</BeerRadio>
+            <BeerRadio T="string" Value="BeerSizes.Extra.GetEnumDescription()">@BeerSizes.Extra.GetEnumDescription()</BeerRadio>
+        </BeerRadioGroup>
+    </BeerNav>
+  
+</BeerRow>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label" Icon="BeerIcons.Iconsearch"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label" Icon="BeerIcons.Iconsearch" SuffixIcon="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label" Icon="BeerIcons.Iconsearch"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label" ImageSrc="favicon.png"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label" ImageSrc="favicon.png" SuffixIcon="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label" ImageSrc="favicon.png"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label" ShowLoader="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label" SuffixIcon="true" ShowLoader="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label" ImageSrc="favicon.png" ShowLoader="true"></BeerTextArea>
+</BeerRow>
+@code {
+    bool border = true;
+    bool round;
+    bool fill;
+    string sizeString = "medium";
+
+    BeerSizes Convert()
+    {
+        return EnumsExtensions.GetEnumValueFromDescription<BeerSizes>(sizeString);
+    }
+
+    BeerBorders GetBorder()
+    {
+        if (border)
+            return BeerBorders.Border;
+
+        return BeerBorders.Default;
+    }
+
+    BeerForms GetForm()
+    {
+        if (round)
+            return BeerForms.Round;
+
+        return BeerForms.Default;
+    }
+}
