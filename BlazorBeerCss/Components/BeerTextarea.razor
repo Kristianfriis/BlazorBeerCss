@@ -1,6 +1,6 @@
 ﻿@namespace BlazorBeerCss
 <div class="@GetClass()">
-    <textarea></textarea>
+    <textarea @onchange="textChanged">@Text</textarea>
     @if (!string.IsNullOrEmpty(Label))
     {
         <label>@Label</label>
@@ -22,15 +22,33 @@
     [Parameter] public string Label { get; set; } = string.Empty;
     [Parameter] public string Error { get; set; } = string.Empty;
     [Parameter] public string Helper { get; set; } = string.Empty;
+    [Parameter] public EventCallback<string> TextChanged { get; set; }
+    [Parameter] public string Text { get; set; } = string.Empty;
+
+    private void textChanged(ChangeEventArgs e)
+    {
+        var value = e.Value;
+        if (e.Value != null)
+        {
+            var result = (string)e.Value;
+            TextChanged.InvokeAsync(result);
+        }
+
+    }
 
     string GetClass()
     {
-        var classString = ClassHelpers.CreateClass("field textarea", Border, Form, Size);
+        var baseClass = "field textarea";
+
+        if (!string.IsNullOrEmpty(Label))
+            baseClass = $"{baseClass} label";
+
+        var classString = ClassHelpers.CreateClass(baseClass, Border, Form, Size);
 
         if (Fill)
             classString = $"{classString} { BeerForms.Fill.GetEnumDescription()}";
 
-        if (string.IsNullOrEmpty(Error))
+        if (!string.IsNullOrEmpty(Error))
             classString = $"{classString} invalid";
 
         return classString;
