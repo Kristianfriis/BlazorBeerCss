@@ -1,0 +1,99 @@
+﻿@using BlazorBeerCss.Components
+@using Microsoft.AspNetCore.Components.Forms
+
+<BeerH4>Chips</BeerH4>
+
+<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
+<BeerRow>
+
+    <EditForm Model="this">
+        <InputRadioGroup @bind-Value="_selectedColor">
+            <InputRadio Value="BeerColors.Default"/> default<br/>
+            <InputRadio Value="BeerColors.Primary"/> @BeerColors.Primary.GetEnumDescription()<br/>
+            <InputRadio Value="BeerColors.Secondary"/> @BeerColors.Secondary.GetEnumDescription()<br/>
+            <InputRadio Value="BeerColors.Tertiary"/> @BeerColors.Tertiary.GetEnumDescription()<br/>
+        </InputRadioGroup>
+    </EditForm>
+
+    <EditForm Model="this">
+        <InputRadioGroup @bind-Value="_selectedDirection">
+            <InputRadio Value="BeerDirections.Default"/> default<br/>
+            <InputRadio Value="BeerDirections.Horizontal"/> @BeerDirections.Horizontal.GetEnumDescription()<br/>
+            <InputRadio Value="BeerDirections.Vertical"/> @BeerDirections.Vertical.GetEnumDescription()<br/>
+        </InputRadioGroup>
+    </EditForm>
+
+    <EditForm Model="this">
+        <InputRadioGroup @bind-Value="_selectedElevation">
+            <InputRadio Value="BeerElevations.Default"/> default<br/>
+            <InputRadio Value="BeerElevations.Small"/> @BeerElevations.Small.GetEnumDescription()<br/>
+            <InputRadio Value="BeerElevations.Medium"/> @BeerElevations.Medium.GetEnumDescription()<br/>
+            <InputRadio Value="BeerElevations.Large"/> @BeerElevations.Large.GetEnumDescription()<br/>
+            <InputRadio Value="BeerElevations.None"/> none<br/>
+        </InputRadioGroup>
+    </EditForm>
+
+    <EditForm Model="this">
+        <InputRadioGroup @bind-Value="_selectedSize">
+            <InputRadio Value="BeerSizes.Default"/> default<br/>
+            <InputRadio Value="BeerSizes.Small"/> @BeerSizes.Small.GetEnumDescription()<br/>
+            <InputRadio Value="BeerSizes.Medium"/> @BeerSizes.Medium.GetEnumDescription()<br/>
+            <InputRadio Value="BeerSizes.Large"/> @BeerSizes.Large.GetEnumDescription()<br/>
+            <InputRadio Value="BeerSizes.Max"/> @BeerSizes.Max.GetEnumDescription()<br/>
+        </InputRadioGroup>
+    </EditForm>
+
+    <button @onclick="Reset">Reset Chip Choices</button>
+</BeerRow>
+
+<BeerRow>
+    <BeerChip Color="@_selectedColor" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Icon="BeerIcons.Iconwifi">Item 1</BeerChip>
+    <BeerChip Color="@_selectedColor" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Icon="BeerIcons.Iconapi">Item 2</BeerChip>
+    <BeerChip Color="@_selectedColor" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Icon="BeerIcons.Iconmap" IconRightAligned="true">Item 3</BeerChip>
+    <BeerChip Color="@_selectedColor" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection">Item 4</BeerChip>
+    <BeerChip Color="@_selectedColor" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Icon="BeerIcons.Iconhealing">Item 5</BeerChip>
+    <BeerChip Color="@_selectedColor" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Icon="BeerIcons.Iconpoll">Item 6</BeerChip>
+</BeerRow>
+
+<BeerRow>
+    <BeerChip Round="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconwifi">Item 1</BeerChip>
+    <BeerChip Round="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconapi">Item 2</BeerChip>
+    <BeerChip Round="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconmap" IconRightAligned="true">Item 3</BeerChip>
+    <BeerChip Round="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor">Item 4</BeerChip>
+    <BeerChip Round="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconhealing">Item 5</BeerChip>
+    <BeerChip Round="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconpoll">Item 6</BeerChip>
+</BeerRow>
+
+<BeerRow>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconwifi">Item 1</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconapi">Item 2</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconmap" IconRightAligned="true">Item 3</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor">Item 4</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconhealing">Item 5</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Color="@_selectedColor" Icon="BeerIcons.Iconpoll">Item 6</BeerChip>
+</BeerRow>
+
+<BeerRow>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Round="true" Color="@_selectedColor" Icon="BeerIcons.Iconwifi">Item 1</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Round="true" Color="@_selectedColor" Icon="BeerIcons.Iconapi">Item 2</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Round="true" Color="@_selectedColor" Icon="BeerIcons.Iconmap" IconRightAligned="true">Item 3</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Round="true" Color="@_selectedColor">Item 4</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Round="true" Color="@_selectedColor" Icon="BeerIcons.Iconhealing">Item 5</BeerChip>
+    <BeerChip Border="true" Size="@_selectedSize" Elevation="@_selectedElevation" Direction="@_selectedDirection" Round="true" Color="@_selectedColor" Icon="BeerIcons.Iconpoll">Item 6</BeerChip>
+</BeerRow>
+
+@code {
+    private BeerColors _selectedColor = BeerColors.Default;
+    private BeerDirections _selectedDirection = BeerDirections.Default;
+    private BeerElevations _selectedElevation = BeerElevations.Default;
+    private BeerSizes _selectedSize = BeerSizes.Default;
+
+    void Reset()
+    {
+        _selectedColor = BeerColors.Default;
+        _selectedDirection = BeerDirections.Default;
+        _selectedElevation = BeerElevations.Default;
+        _selectedSize = BeerSizes.Default;
+    }
+
+}
