@@ -1,0 +1,13 @@
+﻿@if (Icon != null)
+{
+<i>@Icon.Value</i>
+}
+@if (!string.IsNullOrEmpty(ImageSrc))
+{
+<img class="circle" src="@ImageSrc">
+}
+
+@code {
+    [Parameter] public Icon? Icon { get; set; } = null;
+    [Parameter] public string? ImageSrc { get; set; } = string.Empty;
+}

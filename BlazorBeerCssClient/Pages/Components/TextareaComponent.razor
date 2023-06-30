@@ -1,6 +1,5 @@
 ﻿<BeerH4>Textareas</BeerH4>
 
-<BeerSpace Space="BeerSpaces.Space"></BeerSpace>
 <BeerRow Size="BeerSizes.Wrap">
     <BeerNav>
         <BeerCheckbox @bind-IsChecked="@border">border</BeerCheckbox>
@@ -20,10 +19,29 @@
     <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text"></BeerTextArea>
     <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text"></BeerTextArea>
 </BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
 <BeerRow Size="BeerSizes.Wrap">
     <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label"></BeerTextArea>
     <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label"></BeerTextArea>
     <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label" Icon="BeerIcons.Iconsearch"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label" Icon="BeerIcons.Iconsearch" SuffixIcon="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label" Icon="BeerIcons.Iconsearch"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label" ImageSrc="favicon.png"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label" ImageSrc="favicon.png" SuffixIcon="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label" ImageSrc="favicon.png"></BeerTextArea>
+</BeerRow>
+<BeerSpace Space="BeerSpaces.SmallSpace"></BeerSpace>
+<BeerRow Size="BeerSizes.Wrap">
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Label="Label" ShowLoader="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Helper="Helper text" Label="Label" SuffixIcon="true" ShowLoader="true"></BeerTextArea>
+    <BeerTextArea Size="@Convert()" Border="@GetBorder()" Fill="@fill" Form="@GetForm()" Error="Error text" Label="Label" ImageSrc="favicon.png" ShowLoader="true"></BeerTextArea>
 </BeerRow>
 @code {
     bool border = true;

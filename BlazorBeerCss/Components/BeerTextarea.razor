@@ -1,10 +1,36 @@
 ﻿@namespace BlazorBeerCss
 <div class="@GetClass()">
+    @if (!SuffixIcon)
+    {
+        if (UseIconOrImage())
+        {
+            <IconOrImage Icon="@Icon" ImageSrc="@ImageSrc"></IconOrImage>
+        }
+        if (ShowLoader)
+        {
+            <a class="loader"></a>
+        }
+    }
+
     <textarea @onchange="textChanged">@Text</textarea>
+
     @if (!string.IsNullOrEmpty(Label))
     {
         <label>@Label</label>
     }
+
+    @if (SuffixIcon)
+    {
+        if (UseIconOrImage())
+        {
+            <IconOrImage Icon="@Icon" ImageSrc="@ImageSrc"></IconOrImage>
+        }
+        if (ShowLoader)
+        {
+            <a class="loader"></a>
+        }
+    }
+
     @if(!string.IsNullOrEmpty(Error)){
         <span class="error">@Error</span>
     }
@@ -24,6 +50,18 @@
     [Parameter] public string Helper { get; set; } = string.Empty;
     [Parameter] public EventCallback<string> TextChanged { get; set; }
     [Parameter] public string Text { get; set; } = string.Empty;
+    [Parameter] public Icon? Icon { get; set; } = null;
+    [Parameter] public string? ImageSrc { get; set; } = string.Empty;
+    [Parameter] public bool SuffixIcon { get; set; }
+    [Parameter] public bool ShowLoader { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (!string.IsNullOrEmpty(ImageSrc) && Icon is not null)
+            throw new ArgumentNullException(nameof(BeerTextArea), "ImageSrc and Icon cannot both be defined");
+
+        base.OnInitialized();
+    }
 
     private void textChanged(ChangeEventArgs e)
     {
@@ -43,6 +81,14 @@
         if (!string.IsNullOrEmpty(Label))
             baseClass = $"{baseClass} label";
 
+        if (UseIconOrImage())
+        {
+            if (SuffixIcon)
+                baseClass = $"{baseClass} suffix";
+            else
+                baseClass = $"{baseClass} prefix";
+        }
+
         var classString = ClassHelpers.CreateClass(baseClass, Border, Form, Size);
 
         if (Fill)
@@ -52,5 +98,13 @@
             classString = $"{classString} invalid";
 
         return classString;
+    }
+
+    bool UseIconOrImage()
+    {
+        if (Icon != null || !string.IsNullOrEmpty(ImageSrc))
+            return true;
+
+        return false;
     }
 }
