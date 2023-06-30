@@ -1,0 +1,38 @@
+﻿@namespace BlazorBeerCss
+<div class="@GetClass()">
+    <textarea></textarea>
+    @if (!string.IsNullOrEmpty(Label))
+    {
+        <label>@Label</label>
+    }
+    @if(!string.IsNullOrEmpty(Error)){
+        <span class="error">@Error</span>
+    }
+    @if (!string.IsNullOrEmpty(Helper))
+    {
+        <span class="helper">@Helper</span>
+    }
+</div>
+
+@code {
+    [Parameter] public BeerBorders Border { get; set; } = BeerBorders.Default; 
+    [Parameter] public BeerForms Form { get; set; } = BeerForms.Default;
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+    [Parameter] public bool Fill { get; set; } = false;
+    [Parameter] public string Label { get; set; } = string.Empty;
+    [Parameter] public string Error { get; set; } = string.Empty;
+    [Parameter] public string Helper { get; set; } = string.Empty;
+
+    string GetClass()
+    {
+        var classString = ClassHelpers.CreateClass("field textarea", Border, Form, Size);
+
+        if (Fill)
+            classString = $"{classString} { BeerForms.Fill.GetEnumDescription()}";
+
+        if (string.IsNullOrEmpty(Error))
+            classString = $"{classString} invalid";
+
+        return classString;
+    }
+}
