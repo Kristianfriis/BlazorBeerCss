@@ -58,7 +58,7 @@
     protected override void OnInitialized()
     {
         if (!string.IsNullOrEmpty(ImageSrc) && Icon is not null)
-            throw new ArgumentNullException(nameof(BeerTextArea), "ImageSrc and Icon cannot both be defined");
+            throw new ArgumentNullException(nameof(BeerTextarea), "ImageSrc and Icon cannot both be defined");
 
         base.OnInitialized();
     }
