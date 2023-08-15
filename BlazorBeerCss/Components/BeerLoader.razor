@@ -1,0 +1,16 @@
+﻿@namespace BlazorBeerCss
+<a class="@GetClass()"></a>
+
+@code {
+    [Parameter] public BeerSizes Size { get; set; } = BeerSizes.Default;
+    [Parameter] public BeerColors Color { get; set; } = BeerColors.Default;
+
+    string GetClass()
+    {
+        var baseClass = "loader";
+
+        var classString = ClassHelpers.CreateClass(baseClass, Size, Color);
+
+        return classString;
+    }
+}
