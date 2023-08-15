@@ -19,5 +19,11 @@ public enum BeerColors
     [Description("secondary-container")]
     SecondaryContainer,
     [Description("tertiary-container")]
-    TertiaryContainer
+    TertiaryContainer,
+    [Description("pink")]
+    Pink,
+    [Description("orange")]
+    Orange,
+    [Description("yellow")]
+    Yellow
 }
